@@ -171,18 +171,6 @@ body {
       font-size: 14px;
       text-transform: uppercase;
       font-weight: normal;
-
-      &::after {
-         content: "";
-         display: block;
-         height: 1px;
-      }
-
-      &.link:hover, &.active {
-        &::after {
-          @include gradient(); 
-        }
-      }
    }
 }
 
@@ -517,156 +505,11 @@ body {
 }
 
 #thanks-page {
-   .header {
-      background: transparent;
-   }
-
-   .page-wrapper {
-      background-image: url('../img/thanks-back-top.png');
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: right top;
-   }
 
    .section-thanks {
-      padding: 200px 0 0 0;
       flex-grow: 1;
-      text-align: left;
-   
-      &-content {
-         display: flex;
-         justify-content: space-between;         
-      }
-   
-      &-block {
-         max-width: 400px;
-      }
-   
-      &-text {
-         font-size: 24px;
-         margin: 25px 0 60px;
-      }
-   
-      &-link {
-         text-decoration: underline;
-      }
    }
 }
 
-.modal {
-  text-align: center;
-  background-image: url('../img/modal-back.png');
-  background-repeat: no-repeat;
-  background-position: center bottom;
-
-  &[data-remodal-id="obsudit-sodrudni4estvo"] {
-    padding-bottom: 20px;
-  }
-
-  &-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 50px;
-  }
-
-  form {
-    margin: 0 auto;
-    width: 220px;
-  }
-
-  .input-div {
-    margin-bottom: 10px;
-  }
-
-  .button {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  &[data-remodal-id="zadat-vopros"] {
-    padding-bottom: 20px;
-    max-width: 750px;
-    background-image: url('../img/remodal-back.png');
-    
-    form {
-      width: auto;
-      max-width: 535px;
-      margin: 0 auto;
-    }
-
-    .textarea {
-      flex-grow: 1;
-      resize: none;
-    }
-
-    .input-div {
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  &-form {
-    display: flex;
-    margin-bottom: 5px;
-  }
-
-  &-left {
-    margin-right: 20px;
-  }
-
-  &-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .button {
-      width: auto;
-    }
-  }
-}
-
-.more {
-   max-width: 880px;
-   padding: 0;
-
-   &-content {
-      display: flex;
-      align-items: flex-start;
-      padding: 35px 50px 35px 50px;
-   }
-
-   &-img {
-     margin-right: 70px;
-   }
-
-   &-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-   }
-
-   &-trademarks {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-      img {
-         margin-right: 20px;
-      }
-   }
-   .form {
-      background-color: $accent;
-      padding: 10px 35px;
-
-      .input-div {
-        max-width: 160px;       
-        margin-right: 10px; 
-      }
-
-      .button {
-        white-space: nowrap;
-      }
-   }
-}
 
 @import './_media';
