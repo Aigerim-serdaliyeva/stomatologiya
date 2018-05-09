@@ -87,7 +87,6 @@ p {
    text-align: center;
    color: #fff !important;
    border: 0;
-   min-width: 165px;
    cursor: pointer;
    border-bottom: 3px solid #2d6b04;
    background-image: -moz-linear-gradient( 90deg, rgb(51,136,9) 0%, rgb(100,179,6) 74%, rgb(122,206,2) 100%);
@@ -110,6 +109,12 @@ p {
 
   .input {
     width: 100%;  
+  }
+  label {
+   color: #9d9c9c;
+   text-align: left;
+   font-size: 14px;
+   display: block;
   }
 }
 

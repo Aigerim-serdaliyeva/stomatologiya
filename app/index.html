@@ -56,22 +56,22 @@
                </button>
             </div>
 
-            <nav class="main-menu">
-               <div class="container">
-                  <ul>
-                     <li><a class="link" href="#">Детская стоматология</a></li>
-                     <li><a class="link" href="#">лечение зубов</a></li>
-                     <li><a class="link" href="#">все услуги</a></li>
-                     <li><a class="link" href="#">О клинике</a></li>
-                     <li><a class="link" href="#">Наши врачи</a></li>							
-                     <li><a class="link" href="#">Сертификаты</a></li>							
-                     <li><a class="link" href="#">Отзывы </a></li>							
-                     <li><a class="link" href="#">Контакты</a></li>							
-                     <li class="visible-xs visible-sm"><a href="tel:+88462150102" class="text-phone">8 (846) 215-01-02</a></li>
-                  </ul>
-               </div>
-            </nav>  
          </div>
+         <nav class="main-menu">
+            <div class="container">
+               <ul>
+                  <li><a class="link" href="#">Детская стоматология</a></li>
+                  <li><a class="link" href="#">лечение зубов</a></li>
+                  <li><a class="link" href="#">все услуги</a></li>
+                  <li><a class="link" href="#">О клинике</a></li>
+                  <li><a class="link" href="#">Наши врачи</a></li>							
+                  <li><a class="link" href="#">Сертификаты</a></li>							
+                  <li><a class="link" href="#">Отзывы </a></li>							
+                  <li><a class="link" href="#">Контакты</a></li>							
+                  <li class="visible-xs visible-sm"><a href="tel:+88462150102" class="text-phone">8 (846) 215-01-02</a></li>
+               </ul>
+            </div>
+         </nav>  
       </header>      
       
       <section class="section section-main inverse" id="main">
@@ -117,11 +117,13 @@
                   <form action="/mail.php" method="post">
                      <input type="hidden" name="info" value="Запишитесь на бесплатный комплексный осмотр">
                      <div class="input-div">
-                        <input type="text" class="input" name="name" placeholder="Ваше имя:">
+                        <label>Ваше имя:</label>
+                        <input type="text" class="input" name="name" placeholder="">
                      </div>
 
                      <div class="input-div">
-                        <input type="tel" class="input" name="phone" placeholder="Ваш телефон:" required>
+                        <label>Ваш телефон:</label>
+                        <input type="tel" class="input" name="phone" placeholder="" required>
                         <span class="error-message">Заполните это поле</span>
                      </div>
 
@@ -152,6 +154,10 @@
                         <div class="service-text">исправление патологий <br>
                            зубного ряда</div>
                      </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
+                     </div>
                   </div>
                   <div class="service">
                      <img src="./img/service-2.jpg" alt="">
@@ -161,6 +167,10 @@
                         </h4>
                         <div class="service-text">диагностика, лечение зубов <br>
                            и полости рта</div>
+                     </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
                      </div>
                   </div>
                   <div class="service">
@@ -172,6 +182,10 @@
                         <div class="service-text">диагностика и лечение <br>
                            зубочелюстной системы</div>
                      </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
+                     </div>
                   </div>
                   <div class="service">
                      <img src="./img/service-4.jpg" alt="">
@@ -182,6 +196,10 @@
                         <div class="service-text">выявление и лечение заболеваний <br>
                            десен и ротовой полости</div>
                      </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
+                     </div>
                   </div>
                   <div class="service">
                      <img src="./img/service-5.jpg" alt="">
@@ -190,6 +208,10 @@
                            Детская стоматология
                         </h4>
                         <div class="service-text">лечение зубов и полости рта у детей с  <br> младенчества до подросткового возраста</div>
+                     </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
                      </div>
                   </div>
                   <div class="service">
@@ -201,6 +223,10 @@
                         <div class="service-text">лечение заболеваний <br>
                            височно-нижнечелюстного сустава</div>
                      </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
+                     </div>
                   </div>
                   <div class="service">
                      <img src="./img/service-7.jpg" alt="">
@@ -210,7 +236,11 @@
                         </h4>
                         <div class="service-text">распознавание заболеваний на основе <br>
                            данных рентгенологического исследования</div>
-                        </div>
+                     </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
+                     </div>
                   </div>
                   <div class="service">
                      <img src="./img/service-8.jpg" alt="">
@@ -221,6 +251,10 @@
                         <div class="service-text">лечением заболеваний полости рта <br>
                            с помощью хирургических методик</div>
                      </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
+                     </div>
                   </div>
                   <div class="service">
                      <img src="./img/service-9.jpg" alt="">
@@ -230,6 +264,10 @@
                         </h4>
                         <div class="service-text">исправление прикуса и сопутствующих <br>
                            проблем, вызванных его нарушениями</div>
+                     </div>
+                     <div class="service-button">
+                        <button class="button-blue">Подробнее</button>
+                        <button class="button">Записаться</button>
                      </div>
                   </div>
                </div>
@@ -528,27 +566,58 @@
 
 
       <footer class="footer">
+         <nav class="main-menu">
+            <div class="container">
+               <ul>
+                  <li><a class="link" href="#">Детская стоматология</a></li>
+                  <li><a class="link" href="#">лечение зубов</a></li>
+                  <li><a class="link" href="#">все услуги</a></li>
+                  <li><a class="link" href="#">О клинике</a></li>
+                  <li><a class="link" href="#">Наши врачи</a></li>							
+                  <li><a class="link" href="#">Сертификаты</a></li>							
+                  <li><a class="link" href="#">Отзывы </a></li>							
+                  <li><a class="link" href="#">Контакты</a></li>							
+                  <li class="visible-xs visible-sm"><a href="tel:+88462150102" class="text-phone">8 (846) 215-01-02</a></li>
+               </ul>
+            </div>
+         </nav>
          <div class="container">
             <div class="footer-content">
-
                <a href="/" class="logo">
                   <img src="./img/logo.png" alt="">
                </a>
                
-               <h3 class="footer-title">
-                  Оптовая продажа бытовой техники
-                  по всему Казахстану
-               </h3>
-
-               <div class="grow"></div>
-
-                  <a href="tel:+77056550000" class="text-phone">+7 705 655 00 00</a>
-               
-               <div class="vopros-button">
-                  <p class="vopros">Остались вопросы?</p>
-                  <button class="button ajax-submit" data-remodal-target="zadat-vopros" type="submit">Задать вопрос консультанту</button>
+               <div class="footer-address">
+                  <p>г. Самара  ул. Мяги 24а  </p>    
+                  <p>г. Самара, ул. Гагарина, д.26 </p>
                </div>
+
+               <div class="footer-slogan">
+                  Пн-Пт с 8:00 до 20:00  <br>
+                  Сб-Вс с 9:00 до 16:00
+               </div>
+
+
+               <div class="footer-phone hidden-xxs">
+                  <a href="tel:+88462150102" class="text-phone">8 (846) 215-01-02</a>
+               </div>
+
+               <a href="#" class="footer-button" data-remodal-target="zvonok-modal">Перезвоните мне</a>
                
+               
+               <button class="hamburger hamburger--elastic hamburger--accessible">
+                  <span class="hamburger-box">
+                     <span class="hamburger-inner"></span>
+                  </span>
+               </button>
+            </div>
+         </div>
+         <div class="footer-block">
+            <div class="container">
+               <img src="./img/icons.png" alt="">
+               <div class="footer-block-title">
+                  Политика конфиденцивальности
+               </div>
             </div>
          </div>
       </footer>
