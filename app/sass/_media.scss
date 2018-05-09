@@ -4,14 +4,6 @@
     display: none !important;
 }
 
-@media only screen and (max-width : 1790px) {
-   #thanks-page {
-      .page-wrapper {
-         background-position: left top;
-      }   
-   }
-}
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px) {
 
@@ -105,40 +97,6 @@
      
    }
 
-   #thanks-page {
-      .page-wrapper {
-         background: transparent;
-      }
-
-      .header {
-         background: $accent;
-      }
-
-      .section-thanks {
-         padding: 130px 0 30px;
-         display: flex;
-         align-items: center;
-
-         &-img {
-            display: none;
-         }
-
-         &-text {
-            margin-bottom: 20px;
-         }
-      }
-   }
-
-
-}
-
-@media only screen and (max-width : 880px) { 
-  .more {
-    .form {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
 }
 
 /* Small Devices, Tablets */
@@ -168,41 +126,6 @@
       
    }
 
-   .more {
-     &-img {
-       margin-right: 30px;
-     }
-     .form {       
-        form {
-          margin: 0 auto;
-          max-width: 500px;
-          flex-direction: column;
-        }
-
-        &-info {
-          margin: 0 auto;
-          max-width: 500px;          
-        }
-
-        .input-div, .button {
-          max-width: none;
-          width: 100%;
-        }
-     }
-   }
-
-}
-
-@media only screen and (max-width : 640px) {
-  .more {
-    &-content {
-       flex-direction: column;         
-    }
-
-    &-img {
-      margin: 0 auto;
-   }
- }
 }
 
 /* Extra Small Devices, Phones */
@@ -263,41 +186,6 @@
 
 
    }
-
-   .modal {
-     &-title {
-       font-size: 20px;
-     }
-
-     &-form {
-       flex-direction: column;
-     }
-
-     &-left {
-       margin-right: 0;
-     }
-
-     &-footer {
-       display: block;
-       text-align: left;
-     }
-
-     &[data-remodal-id="zadat-vopros"] {  
-       background-size: cover;
-       background-position: center 50px;
-      .input-div {
-        &:last-child {
-          margin-bottom: 10px;
-        }
-      }
-
-      .textarea {
-        height: 125px;
-        margin-bottom: 10px;
-      }
-    }
-   }
-
 }
 
 /* Custom, iPhone Retina */
@@ -312,9 +200,7 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-  .section {
 
-  }
 }
 
 /* Small Devices, Tablets */
@@ -330,10 +216,6 @@
 			padding: 0;
 		}
   }
-  
-  .section {
-    
-  }
 }
 
 /* Large Devices, Wide Screens */
@@ -342,7 +224,5 @@
 }
 
 @media only screen and (min-width : 1920px) {
-	.section {
-    
-  }
+
 }
