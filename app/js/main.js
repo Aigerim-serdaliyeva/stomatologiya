@@ -150,23 +150,51 @@ $(document).ready(function() {
         }
     });
 
+    $(".video-thumb").click(function() {
+       var id = $(this).data("id");
+       $(".video-main > iframe").attr("src", "https://www.youtube.com/embed/" + id);
+    })
 
-    $(".carousel-certificates").owlCarousel({
-      nav: false,
-      dots: true,
-      loop: true,
-      smartSpeed: 500,
-      margin: 30,
-      navText: ['', ''],
-      responsive: {
-         0: { items: 1, mouseDrag: false },
-         480: { items: 2, mouseDrag: true },
-         768: { items: 3 }, 
-         992: { items: 4 }, 
-      },
+   $(".certificate-carousel").on('init', function(event, slick){
+      slick.$slider.find(".slick-center").prev().addClass("slick-center-prev");
    });
 
-   $(".doctors-carousel").owlCarousel({
+   $(".certificate-carousel").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      slick.$slider.find(".slick-slide").removeClass("slick-center-prev");
+      if ((currentSlide > nextSlide && (nextSlide !== 0 || currentSlide === 1)) || (currentSlide === 0 && nextSlide === slick.slideCount - 1)) {
+         console.log('previous');
+         slick.$slider.find(".slick-center").prev().prev().addClass("slick-center-prev");
+      }
+      else {
+         console.log('next');
+         slick.$slider.find(".slick-center").addClass("slick-center-prev");
+      }
+   });
+
+   $('.certificate-carousel').slick({
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      centerMode: true,
+      draggable: false,
+      centerPadding: '0px',
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }      
+        }, {      
+          breakpoint: 479,
+          settings: {
+            slidesToShow: 1,
+          }      
+        }
+      ]
+  });
+
+   $(".doctors-carousel").owlCarousel({    
       nav: false,
       dots: true,
       loop: true,
