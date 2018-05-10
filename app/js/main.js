@@ -166,7 +166,7 @@ $(document).ready(function() {
       },
    });
 
-   $(".carousel-trademarks").owlCarousel({
+   $(".doctors-carousel").owlCarousel({
       nav: false,
       dots: true,
       loop: true,
@@ -175,9 +175,11 @@ $(document).ready(function() {
       navText: ['', ''],
       responsive: {
          0: { items: 1, mouseDrag: false },
-         480: { items: 2, mouseDrag: true } 
+         480: { items: 2, mouseDrag: true },
+         768: { items: 3 }
       },
    });
+
    
 
 });

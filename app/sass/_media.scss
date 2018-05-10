@@ -11,6 +11,7 @@
       &-slogan {
          display: none;
       }
+      
    }
 
    .main-menu {
@@ -18,7 +19,13 @@
    }
 
    .section {    
-      
+      &-doctors {
+         .doctor {
+            &-text-block {
+               padding: 10px;
+            }
+         }
+      }
    }
 
 }
@@ -43,11 +50,13 @@
     }    
 
     .header {
-        &-phone {
-           display: none;
-        }
+      &-phone {
+         display: none;
+      }
 
-        
+      &-address {
+         display: none;
+      }
     }
 
     .footer {
@@ -94,7 +103,54 @@
     }
 
    .section {
-     
+      &-main {
+         &-content {
+            flex-direction: column;
+            justify-content: center;
+            .main-content {
+               margin: 0 auto 20px;
+               text-align: center;
+            }
+         }
+         &-form {
+            margin: 0 auto;
+         }
+      }
+
+      &-services {
+         &-content {
+            
+         }
+         .service {
+            width: 48%;
+         }
+      }
+
+      &-form {
+         .input-div, .button {
+            width: 32%;
+         }
+      }
+
+      &-work {
+         &-content {
+            flex-direction: column;
+         }
+         .work {
+            width: 100%;
+         }
+      }
+
+      &-doctors {
+         .doctor {
+            &-title {
+               font-size: 18px;
+            }
+            &-info {
+               margin-bottom: 10px;
+            }
+         }
+      }
    }
 
 }
@@ -123,6 +179,28 @@
          font-size: 27px;
       }
 
+      &-form {
+         .form-title {
+            font-size: 24px;
+         }
+         form {
+           flex-direction: column;
+           align-items: center;
+         }
+         .input-div, .button {
+            max-width: 500px;
+            width: 100%;
+         }
+      }
+
+      &-stomatolog {
+         .stomatolog {
+            padding: 20px;
+            &-title {
+               font-size: 22px;
+            }
+         }
+      }
       
    }
 
@@ -173,7 +251,7 @@
     }
 
     .header {
-       .button {
+       &-button {
           display: none;
        }
     }
@@ -184,7 +262,35 @@
          margin-bottom: 20px;
       }
 
+      &-main {
+         form {
+            padding: 20px;
+         }
+      }
 
+      &-services {
+         &-content {
+            justify-content: center;
+         }
+         .service {
+            width: 100%;
+         }
+      }
+
+      &-work {
+         &-content {
+         }
+         .work {
+            flex-direction: column;
+            align-items: center;
+            &-img {
+               margin-right: 0;
+            }
+            &-text-block {
+               text-align: center;
+            }
+         }
+      }
    }
 }
 

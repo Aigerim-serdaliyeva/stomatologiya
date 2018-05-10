@@ -109,15 +109,17 @@ body {
 
    .logo {
    }
-   .header-button {
-      border: 1px solid $accent;
-      border-radius: 40px;
-      padding: 12.5px 28.5px;
-      color: $accent;
-   }
+   
    .main-menu {
       border-top: 1px solid #d3d1d1;
    }
+}
+
+.header-button {
+   border: 1px solid $accent;
+   border-radius: 40px;
+   padding: 12.5px 28.5px;
+   color: $accent;
 }
 
 .footer {    
@@ -125,7 +127,6 @@ body {
    top: 0;
    width: 100%;
    z-index: 98;
-   padding: 5px 0;
 
    &-content {
       display: flex;
@@ -133,29 +134,6 @@ body {
       justify-content: space-between;
    }
 
-   &-address {
-      p {
-         margin: 0;
-         padding-left: 14px;
-         position: relative;
-         &::before {
-            content: "";
-            position: absolute;
-            width: 9px;
-            height: 12px;
-            background-image: url('../img/geolokasia.png');
-            left: 0;
-            top: 0;
-         }
-      }
-   }
-
-   .footer-button {
-      border: 1px solid $accent;
-      border-radius: 40px;
-      padding: 12.5px 28.5px;
-      color: $accent;
-   }
    .main-menu {
       background-color: $accent;
       a {
@@ -260,7 +238,7 @@ body {
       }
 
       &-form {
-         width: 380px;
+         max-width: 380px;
          border-radius: 5px;
          overflow: hidden;
          &-title {
@@ -414,16 +392,11 @@ body {
    }
 
    &-doctors {
-      &-content {
-         display: flex;
-         justify-content: space-between;
-      }
       .doctor {
          position: relative;
          img {
             // position: relative;
          }
-         width: 32%;
          &-text-block {
             position: absolute;
             bottom: 0;
@@ -565,6 +538,21 @@ body {
       }
    }
 }
+
+.more {
+   &-content {
+      display: flex;
+      justify-content: space-between;
+   }
+   &-block {
+      max-width: 395px;
+   }
+   &-title {
+      font-size: 24px;
+      margin: 0 0 30px 0;
+   }
+}
+
 
 #thanks-page {
 

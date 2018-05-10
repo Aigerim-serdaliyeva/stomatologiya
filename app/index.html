@@ -155,7 +155,7 @@
                            зубного ряда</div>
                      </div>
                      <div class="service-button">
-                        <button class="button-blue">Подробнее</button>
+                        <button class="button-blue" data-remodal-target="more-modal-1">Подробнее</button>
                         <button class="button">Записаться</button>
                      </div>
                   </div>
@@ -397,7 +397,7 @@
                Наши врачи <br>
                <span>Дружная команда профессионалов</span>
             </div>
-            <div class="section-doctors-content">
+            <div class="owl-carousel doctors-carousel">
                <div class="doctor">
                   <img src="./img/doctor-1.jpg" alt="">
                   <div class="doctor-text-block">
@@ -444,7 +444,7 @@
          </div>
       </section>
 
-      <secion class="section section-reviews">
+      <!-- <secion class="section section-reviews">
          <div class="container">
             <div class="section-title">Отзывы<br>
                <span>Более 100 улыбок от наших клиентов</span>
@@ -465,7 +465,7 @@
                </div>
             </div>
          </div>
-      </secion>
+      </secion> -->
 
 
       <section class="section-form">
@@ -494,7 +494,7 @@
          </div>
       </section>
 
-      <section class="section section-contact">
+      <!-- <section class="section section-contact">
          <div class="container">
             <div class="section-title">
                Наши адреса
@@ -516,7 +516,7 @@
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
 
       <section class="section-form section-form-vopros">
          <div class="container">
@@ -582,27 +582,27 @@
             </div>
          </nav>
          <div class="container">
-            <div class="footer-content">
+            <div class="header-content">
                <a href="/" class="logo">
                   <img src="./img/logo.png" alt="">
                </a>
                
-               <div class="footer-address">
+               <div class="header-address">
                   <p>г. Самара  ул. Мяги 24а  </p>    
                   <p>г. Самара, ул. Гагарина, д.26 </p>
                </div>
 
-               <div class="footer-slogan">
+               <div class="header-slogan">
                   Пн-Пт с 8:00 до 20:00  <br>
                   Сб-Вс с 9:00 до 16:00
                </div>
 
 
-               <div class="footer-phone hidden-xxs">
+               <div class="header-phone hidden-xxs">
                   <a href="tel:+88462150102" class="text-phone">8 (846) 215-01-02</a>
                </div>
 
-               <a href="#" class="footer-button" data-remodal-target="zvonok-modal">Перезвоните мне</a>
+               <a href="#" class="header-button" data-remodal-target="zvonok-modal">Перезвоните мне</a>
                
                
                <button class="hamburger hamburger--elastic hamburger--accessible">
@@ -651,476 +651,30 @@
 
    </div>
 
-   <div class="remodal remodal-small modal" data-remodal-id="obsudit-sodrudni4estvo" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>
-
-      <div class="modal-title">
-          Оставьте заявку <br> и наш консультант перезвонит Вам
-      </div>
-      
-      <form action="/mail.php" method="post">
-        <input type="hidden" name="info" value="Обсудить сотрудничество">
-        <div class="input-div">
-           <img src="./img/name-icon.png" alt="" class="form-icon">
-           <input type="text" class="input" name="name" placeholder="Имя">
-        </div>
-        <div class="input-div">
-            <img src="./img/email-icon.png" alt="">
-            <input type="email" class="input" name="email" placeholder="E-mail">
-            <span class="error-message">Заполните это поле</span>
-         </div>
-        <div class="input-div">
-           <img src="./img/phone-icon.png" alt="" class="form-icon">
-           <input type="tel" class="input" name="phone" placeholder="Номер телефона*" required>
-           <span class="error-message">Заполните это поле</span>
-        </div>
-
-        <button class="button ajax-submit" type="submit" id="obsudit_sodrudni4estvo">Обсудить сотрудничество</button>
-     </form>
-
-     <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-
-   </div>
-
-   <div class="remodal remodal-small modal" data-remodal-id="zadat-vopros" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>
-
-      <div class="modal-title">
-          Задайте вопрос и получите ответ от нашего консультанта
-      </div>
-      
-      <form action="/mail.php" method="post">
-        <input type="hidden" name="info" value="Получить прайс-лист оптовых цен">
-        <div class="modal-form">
-          <div class="modal-left">
-            <div class="input-div">
-                <img src="./img/name-icon.png" alt="" class="form-icon">
-                <input type="text" class="input" name="name" placeholder="Имя">
-             </div>
-             <div class="input-div">
-                 <img src="./img/email-icon.png" alt="">
-                 <input type="email" class="input" name="email" placeholder="E-mail*" required>
-                 <!-- <span class="error-message">Заполните это поле</span> -->
-              </div>
-             <div class="input-div">
-                <img src="./img/phone-icon.png" alt="" class="form-icon">
-                <input type="tel" class="input" name="phone" placeholder="Номер телефона*" required>
-                <!-- <span class="error-message">Заполните это поле</span> -->
-             </div>  
-            </div>
-            <textarea name="Вопрос" placeholder="Текст вопроса*" class="textarea" required></textarea>            
-        </div>
-        
-        <div class="modal-footer">
-            <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-            <button class="button ajax-submit" type="submit" id="zadat_vopros_konsultantu">Задать вопрос консультанту</button>
-        </div>
-
-     </form>
-
-
-   </div>
-     
    <div class="remodal more" data-remodal-id="more-modal-1" data-remodal-options="hashTracking: true">
       <button data-remodal-action="close" class="remodal-close"></button>   
       
       <div class="more-content">
-         <img src="./img/xolodilnik.png" alt="" class="more-img">
+         <img src="./img/service-more-1.jpg" alt="" class="more-img">
          <div class="more-block">
             <h4 class="more-title">
-              Холодильники
+               Ортодонтия
             </h4>
             <div class="more-text">
-               <p>В ассортименте имеются холодильники объемом от 87 л. до 341 л. в различной ценовой категории.</p>
-               <p>Предназначены для розничной продажи с целью использования в бытовых целях.</p>
+               <p>Врач-ортодонт занимается изучением и лечением аномалий зубов. В его обязанности входит исправление неправильного прикуса, восстановление речевого аппарата и дыхательной системы, восстановление жевательной функции. Также ортодонт занимается подготовкой 
+                  к операциям, направленных на исправление 
+                  эстетики лица.</p>
             </div>
-            <div class="more-trademarks">
-               <img src="./img/indesit.png" alt="">
-               <img src="./img/biryusa.png" alt="">
-               <img src="./img/hotpoint.png" alt="">
+            <div class="service-button">
+               <button class="button-blue">Подробнее</button>
+               <button class="button">Записаться</button>
             </div>
          </div>
       </div>
-      <div class="form">
-         <form action="/mail.php" method="post">
-            <input type="hidden" name="info" value="Получить прайс-лист оптовых цен на Холодильник">
-            <div class="input-div">
-               <img src="./img/name-icon.png" alt="" class="form-icon">
-               <input type="text" class="input" name="name" placeholder="Имя">
-            </div>
-            <div class="input-div">
-               <img src="./img/email-icon.png" alt="" class="form-icon">
-               <input type="email" class="input" name="email" placeholder="E-mail*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-            <div class="input-div">
-               <img src="./img/phone-icon.png" alt="" class="form-icon">
-               <input type="tel" class="input" name="phone" placeholder="Телефон*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-
-            <button class="button ajax-submit" type="submit" id="polu4it_prais_list_holodilnik">Получить прайс-лист оптовых цен</button>
-         </form>
-
-         <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-      </div>
-
-   </div>
-
-   <div class="remodal more" data-remodal-id="more-modal-2" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>   
       
-      <div class="more-content">
-         <img src="./img/plita.png" alt="" class="more-img">
-         <div class="more-block">
-            <h4 class="more-title">
-              Кухонные плиты
-            </h4>
-            <div class="more-text">
-               <p>В наличии газовые, электрические и настольные кухонные плиты, а также встроенная техника: поверхности и духовые шкафы на 2, 3 и 4 конфорки. Наибольшим спросом пользуются плиты марок Flama и De Luxe.</p>
-               <p>Кухонные плиты торговой марки Flama являют собой классический вариант современной кухонной плиты. Просты в использовании, обладают высокой прочностью и качеством. Стоимость данных плит также окажется приятным сюрпризом для каждого клиента.</p>
-               <p>Плиты от производителя De Luxe идеально подходят для клиентов, желающих идти в ногу современем и стремящихся преобрести продукцию, выполненную по последним технологиям.</p>
-            </div>
-            <div class="more-trademarks">
-               <img src="./img/gefest.png" alt="">
-               <img src="./img/hansa.png" alt="">
-               <img src="./img/flama.png" alt="">
-               <img src="./img/deluxe.png" alt="">
-            </div>
-         </div>
-      </div>
-      <div class="form">
-         <form action="/mail.php" method="post">
-            <input type="hidden" name="info" value="Получить прайс-лист оптовых цен на Кухонные плиты">
-            <div class="input-div">
-               <img src="./img/name-icon.png" alt="" class="form-icon">
-               <input type="text" class="input" name="name" placeholder="Имя">
-            </div>
-            <div class="input-div">
-               <img src="./img/email-icon.png" alt="" class="form-icon">
-               <input type="email" class="input" name="email" placeholder="E-mail*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-            <div class="input-div">
-               <img src="./img/phone-icon.png" alt="" class="form-icon">
-               <input type="tel" class="input" name="phone" placeholder="Телефон*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-
-            <button class="button ajax-submit" type="submit" id="polu4it_prais_list_kuhannyie_plityi">Получить прайс-лист оптовых цен</button>
-         </form>
-
-         <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-      </div>
-
    </div>
 
-   <div class="remodal more" data-remodal-id="more-modal-3" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>   
-      
-      <div class="more-content">
-         <img src="./img/stiralnaya.png" alt="" class="more-img">
-         <div class="more-block">
-            <h4 class="more-title">
-              Стиральные машины
-            </h4>
-            <div class="more-text">
-               <p>Стиральные машины автомат и полуавтомат. Также в наличии сушильные машины.</p>
-               <p>Загрузка белья от 4 до 8 кг.</p>
-            </div>
-            <div class="more-trademarks">
-               <img src="./img/hotpoint.png" alt="">
-               <img src="./img/indesit.png" alt="">
-               <img src="./img/whirlpool.png" alt="">
-               <img src="./img/atlantic.png" alt="">
-            </div>
-         </div>
-      </div>
-      <div class="form">
-         <form action="/mail.php" method="post">
-            <input type="hidden" name="info" value="Получить прайс-лист оптовых цен на Стиральные машины">
-            <div class="input-div">
-               <img src="./img/name-icon.png" alt="" class="form-icon">
-               <input type="text" class="input" name="name" placeholder="Имя">
-            </div>
-            <div class="input-div">
-               <img src="./img/email-icon.png" alt="" class="form-icon">
-               <input type="email" class="input" name="email" placeholder="E-mail*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-            <div class="input-div">
-               <img src="./img/phone-icon.png" alt="" class="form-icon">
-               <input type="tel" class="input" name="phone" placeholder="Телефон*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
 
-            <button class="button ajax-submit" type="submit" id="polu4it_prais_list_stiralnyie_mashinyi">Получить прайс-лист оптовых цен</button>
-         </form>
-
-         <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-      </div>
-
-   </div>
-
-   <div class="remodal more" data-remodal-id="more-modal-4" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>   
-      
-      <div class="more-content">
-         <img src="./img/voda.png" alt="" class="more-img">
-         <div class="more-block">
-            <h4 class="more-title">
-               Водонагреватели
-            </h4>
-            <div class="more-text">
-               <p>Электрические водонагреватели.</p>
-               <p>Объем: от 10 л. до 200 л.</p>
-            </div>
-            <div class="more-trademarks">
-               <img src="./img/deluxe.png" alt="">
-               <img src="./img/midea.png" alt="">
-               <img src="./img/ariston.png" alt="">
-            </div>
-         </div>
-      </div>
-      <div class="form">
-         <form action="/mail.php" method="post">
-            <input type="hidden" name="info" value="Получить прайс-лист оптовых цен на Водонагреватели">
-            <div class="input-div">
-               <img src="./img/name-icon.png" alt="" class="form-icon">
-               <input type="text" class="input" name="name" placeholder="Имя">
-            </div>
-            <div class="input-div">
-               <img src="./img/email-icon.png" alt="" class="form-icon">
-               <input type="email" class="input" name="email" placeholder="E-mail*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-            <div class="input-div">
-               <img src="./img/phone-icon.png" alt="" class="form-icon">
-               <input type="tel" class="input" name="phone" placeholder="Телефон*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-
-            <button class="button ajax-submit" type="submit" id="polu4it_prais_list_vodonagrivateli">Получить прайс-лист оптовых цен</button>
-         </form>
-
-         <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-      </div>
-
-   </div>
-
-   <div class="remodal more" data-remodal-id="more-modal-5" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>   
-      
-      <div class="more-content">
-         <img src="./img/melkayabt.png" alt="" class="more-img">
-         <div class="more-block">
-            <h4 class="more-title">
-              Мелкая бытовая техника
-            </h4>
-            <div class="more-text">
-               <table>
-                  <tr>
-                     <td>- Блендеры <br>
-                      - Вафельницы <br>
-                      - Весы <br>
-                      - Измельчители <br>
-                      - Кофеварки, кофемолки <br>
-                      - Фены <br>
-                      - Мультиварки <br>
-                      - Электромясорубки <br>
-                      - Электросоковыжималки                     
-                      </td>
-                     <td>- Утюги <br>
-                      - Хлебопечи <br>
-                      - Чайники <br>
-                      - Электросушилки для обуви <br>
-                      - Микроволновые печи <br>
-                      - Увлежнители воздуха <br>
-                      - Электросковородки <br>
-                      - Термопоты
-                      </td>
-                  </tr>
-               </table>
-            </div>
-            <div class="more-trademarks">
-               <img src="./img/redmond.png" alt="">
-               <img src="./img/maxima.png" alt="">
-               <img src="./img/aksion.png" alt="">
-            </div>
-         </div>
-      </div>
-      <div class="form">
-         <form action="/mail.php" method="post">
-            <input type="hidden" name="info" value="Получить прайс-лист оптовых цен на Мелкая бытовая техника">
-            <div class="input-div">
-               <img src="./img/name-icon.png" alt="" class="form-icon">
-               <input type="text" class="input" name="name" placeholder="Имя">
-            </div>
-            <div class="input-div">
-               <img src="./img/email-icon.png" alt="" class="form-icon">
-               <input type="email" class="input" name="email" placeholder="E-mail*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-            <div class="input-div">
-               <img src="./img/phone-icon.png" alt="" class="form-icon">
-               <input type="tel" class="input" name="phone" placeholder="Телефон*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-
-            <button class="button ajax-submit" type="submit" id="polu4it_prais_list_melkaia_byitovaia_tehnika">Получить прайс-лист оптовых цен</button>
-         </form>
-
-         <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-      </div>
-
-   </div>
-
-   <div class="remodal more" data-remodal-id="more-modal-6" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>   
-      
-      <div class="more-content">
-         <img src="./img/morozilnik.png" alt="" class="more-img">
-         <div class="more-block">
-            <h4 class="more-title">
-              Торговое морозильное и холодильное оборудование
-            </h4>
-            <div class="more-text">
-               <p>Предназначено для размещения в продуктовых магазинах, супермаркетах и заведениях общественного питания.</p>
-               
-               <p>Существует в 3-х вариантах: <br>
-                - Вертикальный холодильный шкаф-витрина <br>
-                - Горизонтальная холодильная витрина <br>
-                - Лари морозильные со стеклянной или металлической крышкой
-                </p>
-            </div>
-            <div class="more-trademarks">
-               <img src="./img/biryusa.png" alt="">
-               <img src="./img/skandinavia.png" alt="">
-               <img src="./img/skyworth.png" alt="">
-            </div>
-         </div>
-      </div>
-      <div class="form">
-         <form action="/mail.php" method="post">
-            <input type="hidden" name="info" value="Получить прайс-лист оптовых цен на Торговое морозильное и холодильное оборудование">
-            <div class="input-div">
-               <img src="./img/name-icon.png" alt="" class="form-icon">
-               <input type="text" class="input" name="name" placeholder="Имя">
-            </div>
-            <div class="input-div">
-               <img src="./img/email-icon.png" alt="" class="form-icon">
-               <input type="email" class="input" name="email" placeholder="E-mail*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-            <div class="input-div">
-               <img src="./img/phone-icon.png" alt="" class="form-icon">
-               <input type="tel" class="input" name="phone" placeholder="Телефон*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-
-            <button class="button ajax-submit" type="submit" id="polu4it_prais_list_holodilnoe_oborudovanie">Получить прайс-лист оптовых цен</button>
-         </form>
-
-         <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-      </div>
-
-   </div>
-
-   <div class="remodal more" data-remodal-id="more-modal-7" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>   
-      
-      <div class="more-content">
-         <img src="./img/medisinskoe.png" alt="" class="more-img">
-         <div class="more-block">
-            <h4 class="more-title">
-              Медицинское холодильное оборудование
-            </h4>
-            <div class="more-text">
-               <p>Предназначено для хранения лекарств, вакцин, медицинских и ветеринарных препаратов.</p>
-               <p>Широко используется в аптеках, больницах, клиниках, лабораториях, центрах диагностики, научно-исследовательских учреждениях, а также в ветеринарных клиниках.</p>
-            </div>
-            <div class="more-trademarks">
-               <img src="./img/biryusa.png" alt="">
-            </div>
-         </div>
-      </div>
-      <div class="form">
-         <form action="/mail.php" method="post">
-            <input type="hidden" name="info" value="Получить прайс-лист оптовых цен на Медицинское холодильное оборудование">
-            <div class="input-div">
-               <img src="./img/name-icon.png" alt="" class="form-icon">
-               <input type="text" class="input" name="name" placeholder="Имя">
-            </div>
-            <div class="input-div">
-               <img src="./img/email-icon.png" alt="" class="form-icon">
-               <input type="email" class="input" name="email" placeholder="E-mail*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-            <div class="input-div">
-               <img src="./img/phone-icon.png" alt="" class="form-icon">
-               <input type="tel" class="input" name="phone" placeholder="Телефон*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-
-            <button class="button ajax-submit" type="submit" id="polu4it_prais_list_med_oborudovanie">Получить прайс-лист оптовых цен</button>
-         </form>
-
-         <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-      </div>
-
-   </div>
-
-   <div class="remodal more" data-remodal-id="more-modal-8" data-remodal-options="hashTracking: true">
-      <button data-remodal-action="close" class="remodal-close"></button>   
-      
-      <div class="more-content">
-         <img src="./img/acsessuary.png" alt="" class="more-img">
-         <div class="more-block">
-            <h4 class="more-title">
-              Акссесуары и запасные части
-            </h4>
-            <div class="more-text">
-               <p>- Кухонные вытяжки <br>
-                - Решетки <br>
-                - Крышки для мультиварок <br>
-                - Шнуры питания <br>
-                - Панели для мультипекаря <br>
-                - "Умные" розетки 
-                
-                  </p>
-            </div>
-            <div class="more-trademarks">
-               <img src="./img/redmond.png" alt="">
-               <img src="./img/aksion.png" alt="">
-               <img src="./img/deluxe.png" alt="">
-            </div>
-         </div>
-      </div>
-      <div class="form">
-         <form action="/mail.php" method="post">
-            <input type="hidden" name="info" value="Получить прайс-лист оптовых цен на Акссесуары и запасные части">
-            <div class="input-div">
-               <img src="./img/name-icon.png" alt="" class="form-icon">
-               <input type="text" class="input" name="name" placeholder="Имя">
-            </div>
-            <div class="input-div">
-               <img src="./img/email-icon.png" alt="" class="form-icon">
-               <input type="email" class="input" name="email" placeholder="E-mail*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-            <div class="input-div">
-               <img src="./img/phone-icon.png" alt="" class="form-icon">
-               <input type="tel" class="input" name="phone" placeholder="Телефон*" required>
-               <span class="error-message">Заполните это поле</span>
-            </div>
-
-            <button class="button ajax-submit" type="submit" id="polu4it_prais_list_aksessuaryi">Получить прайс-лист оптовых цен</button>
-         </form>
-
-         <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
-      </div>
-
-   </div>
 										
 	<link rel="stylesheet" href="./css/libs.min.css">
 	<link rel="stylesheet" href="./css/main.min.css">
