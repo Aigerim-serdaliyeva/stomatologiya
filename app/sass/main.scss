@@ -443,6 +443,38 @@ body {
       }
    }
 
+   &-certificates {
+      .slick {
+         &-slider {
+            padding: 0 140px;
+         }
+
+         &-track {
+            padding: 130px 0;
+         }
+      }
+
+      .slick-slide {
+         position: relative;
+         transform: scale(1);
+         transition: all 300ms ease 0s;
+      
+         &.slick-center {
+            transform: scale(2);
+            z-index: 10;
+         }         
+      
+         &.slick-center-prev {
+            transform: scale(1.5) translateX(-20px);
+         }
+      }
+
+      .slick-center + .slick-slide {
+         z-index: 9;
+         transform: scale(1.5) translateX(20px);
+      }
+  }
+
    &-reviews {
       background-image: url('../img/reviews-back.png');
       .review {

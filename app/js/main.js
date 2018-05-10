@@ -150,21 +150,36 @@ $(document).ready(function() {
         }
     });
 
-
-    $(".carousel-certificates").owlCarousel({
-      nav: false,
-      dots: true,
-      loop: true,
-      smartSpeed: 500,
-      margin: 30,
-      navText: ['', ''],
-      responsive: {
-         0: { items: 1, mouseDrag: false },
-         480: { items: 2, mouseDrag: true },
-         768: { items: 3 }, 
-         992: { items: 4 }, 
-      },
+   $(".certificate-carousel").on('init', function(event, slick){
+      slick.$slider.find(".slick-center").prev().addClass("slick-center-prev");
    });
+
+   $(".certificate-carousel").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      slick.$slider.find(".slick-slide").removeClass("slick-center-prev");
+      slick.$slider.find(".slick-center").addClass("slick-center-prev");
+   });
+
+    $('.certificate-carousel').slick({
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '0px',
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }      
+        }, {      
+          breakpoint: 479,
+          settings: {
+            slidesToShow: 1,
+          }      
+        }
+      ]
+  });
 
    $(".carousel-trademarks").owlCarousel({
       nav: false,
