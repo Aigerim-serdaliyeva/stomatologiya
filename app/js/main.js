@@ -208,6 +208,27 @@ $(document).ready(function() {
       },
    });
 
+   $(".reviews-carousel").owlCarousel({    
+      nav: false,
+      dots: true,
+      loop: true,
+      smartSpeed: 500,
+      margin: 30,
+      navText: ['', ''],
+      items: 1
+   });
+
+
+   $(".klinika-carousel").owlCarousel({    
+      nav: false,
+      dots: true,
+      loop: true,
+      smartSpeed: 500,
+      margin: 30,
+      navText: ['', ''],
+      items: 1
+   });
+
    
 
 });

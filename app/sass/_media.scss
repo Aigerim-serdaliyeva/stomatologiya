@@ -26,6 +26,14 @@
             }
          }
       }
+
+      &-voprosy {
+         &-content {
+            &-1, &-2 {
+               width: 49%;
+            }
+         }
+      }
    }
 
 }
@@ -199,6 +207,20 @@
             &-title {
                font-size: 22px;
             }
+         }
+      }
+
+      &-voprosy {
+         &-content {
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+            &-1, &-2 {
+               width: 100%;
+            }
+         }
+         .vopros {
+            padding: 10px;
          }
       }
       

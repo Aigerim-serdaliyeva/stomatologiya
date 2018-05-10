@@ -270,6 +270,7 @@ body {
    }
 
    &-services {
+      background-image: url('../img/service-back.jpg');
       &-content {
          display: flex;
          flex-wrap: wrap;
@@ -325,6 +326,37 @@ body {
             }
          }
       }
+   }
+
+   &-klinika {
+      &-text {
+         color: $accent;
+         font-size: 24px;
+         font-weight: bold;
+         max-width: 740px;
+         margin: 0 auto;
+      }
+      &-content {
+         position: relative;
+         padding-top: 55px;
+      }
+      .klinika {
+         max-width: 1090px;
+         background-color: #fff;
+         margin: 0 0 25px auto;
+         padding: 30px 15px 45px;
+         &-text {
+            max-width: 440px;
+            margin: 0 0 0 auto;
+            text-align: left;
+         }
+         &-carousel {
+            position: absolute;
+            top: 0;
+            left: -22%;
+         }
+      }
+      
    }
 
    &-form {
@@ -587,6 +619,61 @@ body {
          }
       }
    }
+   
+   &-voprosy {
+      &-content {
+         display: flex;
+         justify-content: space-between;
+         &-1, &-2 {
+            width: 48%;
+         }
+         &-text {
+            text-align: left;
+            ul {
+               padding-left: 15px;
+               li {
+                  list-style: none;
+                  margin-bottom: 10px;
+                  position: relative;
+                  &::before {
+                     content: "";
+                     position: absolute;
+                     width: 5px;
+                     height: 5px;
+                     border-radius: 50%;
+                     background-color: $accent;
+                     left: -15px;
+                     top: 7px;
+                  }
+               }
+            }
+         }
+      }
+      .vopros {
+         position: relative;
+         padding: 10px 25px;
+         border: 1px solid #cfe0e9;
+         text-align: left;
+         border-radius: 5px;
+         margin-bottom: 15px;
+         background-color: #fff;
+         img {
+            position: absolute;
+            padding: 13px 25px;
+            background-color: #cfe0e9;
+            right: 0;
+            top: 0;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            &:hover {
+               background-color: $accent;
+            }
+         }
+         &:hover {
+            border: 1px solid $accent;
+         }
+      }
+   }
 
    &-form-vopros {
       background-image: url('../img/form-vopros-back.jpg');
@@ -633,10 +720,29 @@ body {
    }
    &-block {
       max-width: 395px;
+      display: flex;
+      flex-direction: column;
    }
    &-title {
       font-size: 24px;
       margin: 0 0 30px 0;
+   }
+   &-button {
+      justify-content: space-between;
+      font-size: 20px;
+      .button-blue {
+         background-color: $accent;
+         border: none;
+         border-radius: 5px;
+         color: #fff;
+         width: 150px;
+         padding: 13px 5px;
+         margin-right: 20px;
+      }
+      .button {
+         width: 150px;
+         padding: 13px 5px;
+      }
    }
 }
 
