@@ -200,7 +200,7 @@ body {
 
 .section {
    text-align: center;
-   padding: 40px 0 20px;
+   padding: 80px 0;
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center center;
@@ -444,13 +444,28 @@ body {
    }
 
    &-certificates {
+      background-image: url('../img/certificate-back.jpg');
+
       .slick {
          &-slider {
-            padding: 0 140px;
+            padding: 0 100px;
          }
 
          &-track {
             padding: 130px 0;
+         }
+
+         &-arrow {
+            transform: translateY(-50%);
+            top: 50%;
+         }
+
+         &-prev {
+            left: 0;
+         }
+
+         &-next {
+            right: 0;
          }
       }
 
