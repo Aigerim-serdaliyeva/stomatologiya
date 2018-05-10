@@ -150,6 +150,11 @@ $(document).ready(function() {
         }
     });
 
+    $(".video-thumb").click(function() {
+       var id = $(this).data("id");
+       $(".video-main > iframe").attr("src", "https://www.youtube.com/embed/" + id);
+    })
+
    $(".certificate-carousel").on('init', function(event, slick){
       slick.$slider.find(".slick-center").prev().addClass("slick-center-prev");
    });
