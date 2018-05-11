@@ -220,7 +220,7 @@ $(document).ready(function() {
 
 
    $(".klinika-carousel").owlCarousel({    
-      nav: false,
+      nav: true,
       dots: true,
       loop: true,
       smartSpeed: 500,
@@ -228,6 +228,11 @@ $(document).ready(function() {
       navText: ['', ''],
       items: 1
    });
+
+   $(".vopros-button").click( function() {
+      // $(".vopros").removeClass("active");
+      $(this).parent().toggleClass("active");
+   })
 
    
 

@@ -351,9 +351,10 @@ body {
             text-align: left;
          }
          &-carousel {
-            position: absolute;
-            top: 0;
-            left: -22%;
+            max-width: 690px;
+            // position: absolute;
+            // top: 0;
+            // left: -22%;
          }
       }
       
@@ -627,7 +628,45 @@ body {
          &-1, &-2 {
             width: 48%;
          }
+         
+      }
+      .vopros {
+         &-button {
+            position: relative;
+            padding: 10px 75px 10px 25px;
+            border: 1px solid #e6edf5;
+            text-align: left;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background-color: #fff;
+
+            &:hover {
+               border: 1px solid #85cfe8;
+               .vopros-arrow {
+                  background-color: #85cfe8;
+                  background-image: url('../img/arrow-bottom-white.png');
+               }
+            }
+         }
+         &-arrow {
+            position: absolute;
+            // padding: 13px 25px;
+            background-color: #e6edf5;
+            background-image: url('../img/arrow-bottom.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 72px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            // border-bottom-right-radius: 5px;
+            // border-top-right-radius: 5px;
+         }
+         
+
          &-text {
+            display: none;
             text-align: left;
             ul {
                padding-left: 15px;
@@ -648,29 +687,11 @@ body {
                }
             }
          }
-      }
-      .vopros {
-         position: relative;
-         padding: 10px 25px;
-         border: 1px solid #cfe0e9;
-         text-align: left;
-         border-radius: 5px;
-         margin-bottom: 15px;
-         background-color: #fff;
-         img {
-            position: absolute;
-            padding: 13px 25px;
-            background-color: #cfe0e9;
-            right: 0;
-            top: 0;
-            border-bottom-right-radius: 5px;
-            border-top-right-radius: 5px;
-            &:hover {
-               background-color: $accent;
+
+         &.active {
+            .vopros-text {
+               display: block;
             }
-         }
-         &:hover {
-            border: 1px solid $accent;
          }
       }
    }
