@@ -313,6 +313,18 @@
             }
          }
       }
+
+      &-voprosy {
+         .vopros {
+            &-button {
+               font-size: 14px;
+               padding: 10px 65px 10px 10px;
+            }
+            &-arrow {
+               width: 60px;
+            }
+         }
+      }
    }
 }
 
