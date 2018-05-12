@@ -144,10 +144,23 @@ $(document).ready(function() {
         }
     });
 
-    $(".video-thumb").click(function() {
+   $(".review-link").click(function(e) {
+      e.preventDefault();      
+      $(this).prev().toggleClass("active");      
+   });
+
+   $(".contact-address").click(function() {
+      $(this).siblings().removeClass("active");
+      $(this).addClass("active");
+      
+      var id = $(this).data("id");
+      $(".contact [data-target]").removeClass("active").filter("[data-target=" + id + "]").addClass("active");
+   });
+
+   $(".video-thumb").click(function() {
        var id = $(this).data("id");
        $(".video-main > iframe").attr("src", "https://www.youtube.com/embed/" + id);
-    })
+   });
 
    $(".certificate-carousel").on('init', function(event, slick){
       slick.$slider.find(".slick-center").prev().addClass("slick-center-prev");

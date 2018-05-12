@@ -505,50 +505,61 @@ body {
    &-reviews {
       background-image: url('../img/reviews-back.png');
       .review {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 0 auto;
+
          &-content {
-            display: flex;
-            align-items: flex-start;
-         }
-         &-img {
-            position: absolute;
-            box-shadow: 0px 0px 19.2px 4.8px rgba(182, 182, 183, 0.13);
-            padding: 15px 15px 25px;
-            border-radius: 5px;
-            background-color: #fff;
-            margin-left: -110px;
-            margin-top: 15px;
-            z-index: 1;
-            left: 350px;
-            img {
-               margin-bottom: 20px;
-            }
-            &-title {
-               font-weight: bold;
-            }
-         }
-         &-text {
-            position: relative;
             border-radius: 5px;
             padding: 40px 40px 30px 140px;
             background-color: #fff;
             max-width: 820px;
             text-align: left;
-            margin: 0 0 0 auto;
-            &-link {
-               color: $accent;
-               font-size: 12px;
-               border-bottom: 1px solid $accent;
-               position: relative;
-               &::after {
-                  content: "";
-                  width: 6px;
-                  height: 11px;
-                  background-image: url('../img/tryangle.png');
-                  position: absolute;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  right: -15px;
-               }
+         }
+
+         &-img {
+            box-shadow: 0px 0px 19.2px 4.8px rgba(182, 182, 183, 0.13);
+            padding: 15px 15px 25px;
+            border-radius: 5px;
+            background-color: #fff;
+            margin-right: -80px;
+            width: 160px;
+            z-index: 1;
+
+            img {
+               margin-bottom: 20px;
+            }            
+         }
+
+         &-author {
+            font-weight: bold;
+         }
+
+         &-text {
+            max-height: 150px;
+            overflow: hidden;
+            
+            &.active {
+               max-height: none;
+            }
+         }
+
+         &-link {
+            color: $accent;
+            font-size: 12px;
+            border-bottom: 1px solid $accent;
+            position: relative;
+
+            &::after {
+               content: "";
+               width: 6px;
+               height: 11px;
+               background-image: url('../img/tryangle.png');
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               right: -15px;
             }
          }
       }
@@ -596,41 +607,53 @@ body {
    }
 
    &-contact {
-      .map {
+      [data-target] {
+         display: none;
+         &.active {
+            display: block;
+         }
+      }
+
+      .contact {
          position: relative;
-      }
-      .contact-content {
-         border-radius: 5px;
-         overflow: hidden;
-         max-width: 443px;
-         position: absolute;
-         right: 0;
-         bottom: 50px;
-      }
-      .contact-block {
-         padding: 30px 45px 35px;
-         background-color: #fff;
-         &-text {
-            font-size: 24px;
-            text-align: left;
+
+         &-content {
+            border-radius: 5px;
+            overflow: hidden;
+            max-width: 443px;
+            position: absolute;
+            right: 0;
+            bottom: 50px;
          }
-         &-button {
-            display: flex;
-            font-weight: bold;
-            justify-content: space-between;
-            margin-bottom: 35px;
+
+         &-block {
+            padding: 30px 45px 35px;
+            background-color: #fff;
+
+            &-text {
+               font-size: 24px;
+               text-align: left;
+            }
+
+            &-button {
+               display: flex;
+               font-weight: bold;
+               justify-content: space-between;
+               margin-bottom: 35px;
+            }
          }
-         .address1, .address2 {
+
+         &-address {
             padding: 12px;
             width: 160px;
             border-radius: 8px;
-         }
-         .address1 {
+            cursor: pointer;
             border: 1px solid #cfe0e9;
-         }
-         .address2 {
-            background-color: $accent;
-            color: #fff;
+
+            &.active {
+               background-color: $accent;
+               color: #fff;
+            }
          }
       }
    }
