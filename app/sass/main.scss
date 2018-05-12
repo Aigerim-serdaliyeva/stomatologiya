@@ -82,11 +82,16 @@ body {
    width: 100%;
    z-index: 98;
    padding: 5px 0;
+   border-bottom: 1px solid #d3d1d1;
 
    &-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
+   }
+
+   .grow {
+      display: none;
    }
 
    &-address {

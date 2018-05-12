@@ -56,6 +56,10 @@
 
 @media only screen and (max-width : 991.5px) {	
 
+
+   .page-wrapper {
+      padding-top: 95px;
+   }
     .form {
        &-title {
           font-size: 20px;
@@ -81,29 +85,17 @@
       &-address {
          display: none;
       }
-    }
 
-    .footer {
-        text-align: center;
-        &-content {
-            flex-direction: column;
-            & > * {
-               margin: 0 0 20px 0 !important;            
-            }
-            .vopros-button {
-               margin: 0 !important;
-            }
-            .grow {
-               display: none;
-            }
-        }
+      .grow {
+         display: block;
+      }
     }
 
 	.main-menu {
       display: none;
       background-color: #fff;
       position: fixed;
-      top: 101px;
+      top: 95px;
       left: 0;
       right: 0;
       text-align: left;

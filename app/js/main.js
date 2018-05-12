@@ -6,7 +6,7 @@ $(document).ready(function() {
     var $header = $(".header");
     var $menu = $(".main-menu");
     var utms = parseGET();
-    var headerHeight = 57;
+    var headerHeight = 147;
     var $hamburger = $(".hamburger");
     var sfer = $('[data-remodal-id="obsudit-sodrudni4estvo"]').remodal();
     var $sfer = $('[data-remodal-id="obsudit-sodrudni4estvo"]');
@@ -18,7 +18,7 @@ $(document).ready(function() {
     }
 
     if($wnd.width() < 992) {
-        headerHeight = 105;
+        headerHeight = 94;
     }
 
     $wnd.scroll(function() { onscroll(); });
@@ -74,12 +74,6 @@ $(document).ready(function() {
         $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
     });
 
-    $(".appliances-link").click(function(e) {
-      e.preventDefault();
-      var title = $(this).data("title");
-      $sfer.find("[name=info]").val("Обсудить сотрудничество: " + title);
-      sfer.open();
-    })
 
     $("input[type=tel]").mask("+7 (999) 999 99 99", {
         completed: function() {
