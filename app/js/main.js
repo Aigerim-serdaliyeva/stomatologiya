@@ -156,11 +156,9 @@ $(document).ready(function() {
    $(".certificate-carousel").on('beforeChange', function(event, slick, currentSlide, nextSlide){
       slick.$slider.find(".slick-slide").removeClass("slick-center-prev");
       if ((currentSlide > nextSlide && (nextSlide !== 0 || currentSlide === 1)) || (currentSlide === 0 && nextSlide === slick.slideCount - 1)) {
-         console.log('previous');
          slick.$slider.find(".slick-center").prev().prev().addClass("slick-center-prev");
       }
       else {
-         console.log('next');
          slick.$slider.find(".slick-center").addClass("slick-center-prev");
       }
    });

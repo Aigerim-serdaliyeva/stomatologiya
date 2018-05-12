@@ -261,16 +261,22 @@
             flex-direction: column;
             &-main {
                width: 100%;
-               margin-bottom: 20px;
+               margin-bottom: 10px;
                iframe {
-                  height: 300px;
+                  height: 320px;
                }
             }
             &-thumbs {
+               margin: 0 auto;
                display: flex;
-               justify-content: space-between;
+               max-width: 670px;
+               width: 100%;
                align-items: flex-start;
+               justify-content: center;
                height: auto;
+            }
+            &-thumb {
+               margin-right: 10px;
             }
          }
       }
@@ -395,14 +401,13 @@
 
       &-reviews {
          .video {
-            flex-direction: column;
             &-main {
             }
             &-thumbs {
-               flex-direction: column;
+               flex-wrap: wrap;
+               // flex-direction: column;
             }
             &-thumb {
-               width: 100%;
             }
          }
       }
