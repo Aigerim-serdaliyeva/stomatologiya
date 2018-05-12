@@ -5,7 +5,7 @@
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1199px) {
+@media only screen and (max-width : 1199.5px) {
 
    .header {
       &-slogan {
@@ -19,6 +19,22 @@
    }
 
    .section {    
+      &-klinika {
+         &-content {
+            padding-top: 0;
+         }
+         .klinika {
+            &-carousel {
+               max-width: 500px;
+               top: 50px;
+            }
+            &-text {
+               max-width: 380px;
+               margin: 0 0 50px auto;
+            }
+         }
+      }
+
       &-doctors {
          .doctor {
             &-text-block {
@@ -38,7 +54,7 @@
 
 }
 
-@media only screen and (max-width : 991px) {	
+@media only screen and (max-width : 991.5px) {	
 
     .form {
        &-title {
@@ -134,6 +150,24 @@
          }
       }
 
+      &-klinika {
+         &-content {
+            display: flex;
+            flex-direction: column;
+         }
+         .klinika {
+            &-carousel {
+               position: relative;
+               top: 0;
+               max-width: 690px;
+               margin: 0 auto;
+            }
+            &-text {
+               margin: 0 auto 50px;
+            }
+         }
+      }
+
       &-form {
          .input-div, .button {
             width: 32%;
@@ -159,12 +193,18 @@
             }
          }
       }
+
+      &-contact {
+         &-content {
+            position: static;            
+         }
+      }
    }
 
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 767px) {
+@media only screen and (max-width : 767.5px) {
 
     .logo {
         max-width: 200px;
@@ -223,13 +263,49 @@
             padding: 10px;
          }
       }
+
+      &-reviews {
+         .video {
+            flex-direction: column;
+            &-main {
+               width: 100%;
+               margin-bottom: 20px;
+               iframe {
+                  height: 300px;
+               }
+            }
+            &-thumbs {
+               display: flex;
+               justify-content: space-between;
+               align-items: flex-start;
+               height: auto;
+            }
+         }
+      }
       
+   }
+
+   .more {
+      &-content {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+      &-title {
+         margin: 0 0 20px 0;
+      }
+      &-block {
+         text-align: center;
+      }
+      img {
+         margin-bottom: 20px;
+      }
    }
 
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 479px) {
+@media only screen and (max-width : 479.5px) {
 
   .remodal {
     &.remodal-small {
@@ -299,6 +375,17 @@
          }
       }
 
+      &-klinika {
+         &-text {
+            font-size: 20px;
+         }
+         .klinika {
+            &-text {
+               margin: 0 auto 20px;
+            }
+         }
+      }
+
       &-work {
          &-content {
          }
@@ -310,6 +397,20 @@
             }
             &-text-block {
                text-align: center;
+            }
+         }
+      }
+
+      &-reviews {
+         .video {
+            flex-direction: column;
+            &-main {
+            }
+            &-thumbs {
+               flex-direction: column;
+            }
+            &-thumb {
+               width: 100%;
             }
          }
       }
@@ -326,10 +427,33 @@
          }
       }
    }
+
+   .owl-carousel {
+      .owl {
+         &-prev, &-next {
+            width: 40px;
+            height: 50px;
+         }
+      }
+   }
+   
+
+   .more {
+      &-button {
+         flex-direction: column;
+         align-items: center;
+         .button-blue {
+            margin-bottom: 10px;
+         }
+         .button-blue, button {
+            width: 100% !important;
+         }
+      }
+   }
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 320.5px) {
 
 }
 

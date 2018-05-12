@@ -347,7 +347,7 @@ body {
          margin: 0 0 25px auto;
          padding: 30px 15px 45px;
          &-text {
-            max-width: 440px;
+            max-width: 420px;
             margin: 0 0 80px auto;
             text-align: left;
          }
@@ -495,7 +495,7 @@ body {
          z-index: 9;
          transform: scale(1.5) translateX(20px);
       }      
-  }
+   }
 
    &-reviews {
       background-image: url('../img/reviews-back.png');
@@ -587,6 +587,7 @@ body {
             }
          }
       }
+      
    }
 
    &-contact {
@@ -673,6 +674,7 @@ body {
          &-text {
             display: none;
             text-align: left;
+            padding: 0 20px 0;
             ul {
                padding-left: 15px;
                li {
@@ -740,9 +742,11 @@ body {
 }
 
 .more {
+   max-width: 1000px;
    &-content {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
    }
    &-block {
       max-width: 395px;
@@ -754,8 +758,10 @@ body {
       margin: 0 0 30px 0;
    }
    &-button {
+      display: flex;
       justify-content: space-between;
       font-size: 20px;
+      max-width: 380px;
       .button-blue {
          background-color: $accent;
          border: none;
@@ -763,7 +769,6 @@ body {
          color: #fff;
          width: 150px;
          padding: 13px 5px;
-         margin-right: 20px;
       }
       .button {
          width: 150px;
@@ -777,6 +782,19 @@ body {
 
    .section-thanks {
       flex-grow: 1;
+      &-block {
+         background-image: url('../img/thanks-back.jpg');
+         max-width: 485px;
+         height: 410px;
+         margin: 0 auto;
+         padding-top: 50px;
+         color: #fff;
+         &-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+         }
+      }
    }
 }
 

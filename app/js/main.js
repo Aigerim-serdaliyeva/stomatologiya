@@ -195,7 +195,7 @@ $(document).ready(function() {
   });
 
    $(".doctors-carousel").owlCarousel({    
-      nav: false,
+      nav: true,
       dots: true,
       loop: true,
       smartSpeed: 500,
@@ -209,7 +209,7 @@ $(document).ready(function() {
    });
 
    $(".reviews-carousel").owlCarousel({    
-      nav: false,
+      nav: true,
       dots: true,
       loop: true,
       smartSpeed: 500,
