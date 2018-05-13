@@ -88,6 +88,9 @@
    }
 
    .footer {
+      .main-menu {
+         display: none !important;
+      }
       .grow {
          display: block;
       }

@@ -6,7 +6,7 @@ $(document).ready(function() {
     var $header = $(".header");
     var $menu = $(".main-menu");
     var utms = parseGET();
-    var headerHeight = 147;
+    var headerHeight = 146;
     var $hamburger = $(".hamburger");
     var thanks = $('[data-remodal-id="thanks-modal"]').remodal();
 
@@ -45,7 +45,7 @@ $(document).ready(function() {
                 var section = $(id);
                 var sectionTop = section.offset().top;
 
-                if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
+                if(sectionTop <= scrollPos + 1 && (sectionTop + section.height()) >= scrollPos) {
                     link.addClass('active');
                 } else {
                     link.removeClass('active');

@@ -1,7 +1,6 @@
 @import './base';
 
 html, body {
-	// height: 100%;
 	margin: 0;
 }
 
@@ -170,16 +169,13 @@ body {
 .main-menu {   
    padding: 15px 0;
 
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-    }
+   ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+   }
 
    a {
       display: inline-block;
@@ -188,6 +184,10 @@ body {
       font-size: 14px;
       text-transform: uppercase;
       font-weight: normal;
+
+      &:hover, &.active {
+         color: $accent;
+      }
    }
 }
 
