@@ -138,7 +138,7 @@ $(document).ready(function() {
       if(formValid) {
          $.ajax({
                type: "POST",
-               url: "/mail.php",
+               url: "/mail.html",
                data: data
          }).done(function() {                
          });
