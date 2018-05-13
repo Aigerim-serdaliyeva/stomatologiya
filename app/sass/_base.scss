@@ -155,11 +155,12 @@ p {
 	}
 
 	&+.error-message {
-    display: none;
-    text-align: left;
-    color: red;
-    padding-left: 35px;
-    margin-top: 5px;
+      display: none;
+      text-align: left;
+      color: red;
+      padding-left: 35px;
+      margin-top: 5px;
+      font-size: 14px;
 	}
 
 	&::-webkit-input-placeholder {

@@ -165,6 +165,7 @@ $(document).ready(function() {
    $(".video-thumb").click(function() {
        var id = $(this).data("id");
        $(".video-main > iframe").attr("src", "https://www.youtube.com/embed/" + id);
+       $(".video-text").html($(this).data("title"));
    });
 
    $(".certificate-carousel").on('init', function(event, slick){
