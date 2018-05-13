@@ -27,7 +27,6 @@
          }
       }
 
-
 		&-prev, &-next {
 			position: absolute;
 			top: 50%;
@@ -98,7 +97,6 @@
     text-align: left;
     color: $text_color;
     
-
     &-close {
         left: auto;
         right: 0;
@@ -109,8 +107,13 @@
     }
 
    &.remodal-small {
-      max-width: 490px;
-      padding: 50px 25px;
+      max-width: 380px;
+      padding: 0;
+      background-color: transparent;
+
+      .remodal-close {
+         color: #fff;
+      }
    }
 }
 

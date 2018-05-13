@@ -80,42 +80,34 @@
       <section class="section section-main inverse" id="main">
 			<div class="container">
             <div class="section-main-content">
-               <div class="main-content">
+               <div class="section-main-block">
                   <h1 class="section-main-title">
                      Безболезненное лечение зубов 
                      и восстановление эстетики 
                      на современном оборудовании
                   </h1>
-                  <div class="section-main-text">
+                  <h2 class="section-main-text">
                      Вылечим любой зуб щадящими способами с минимальными 
                      повреждениями. Без боли и вреда для организма
-                  </div>
-                  <div class="main-content-block">
-                     <div class="main-block">
+                  </h2>
+                  <ul class="section-main-list">
+                     <li>
                         <img src="./img/police-icon.png" alt="">
-                        <div class="main-content-block-title">
-                           Лечение по 
-                           полисам ДМС
-                        </div>
-                     </div>
-                     <div class="main-block">
+                        <h3 class="section-main-item">Лечение по полисам ДМС</h3>
+                     </li>
+                     <li>
                         <img src="./img/myshka-icon.png" alt="">
-                        <div class="main-content-block-title">
-                           Отдельная детская стоматология
-                        </div>
-                     </div>
-                     <div class="main-block">
+                        <h3 class="section-main-item">Отдельная детская стоматология</h3>
+                     </li>
+                     <li>
                         <img src="./img/hand-icon.png" alt="">
-                        <div class="main-content-block-title">
-                           Работаем 
-                           с 2007 года
-                        </div>
-                     </div>
-                  </div>
+                        <h3 class="section-main-item">Работаем <br> с 2007 года</h3>
+                     </li>
+                  </ul>
                </div>
 
-               <div class="section-main-form">
-                  <div class="section-main-form-title">Запишитесь на бесплатный комплексный осмотр</div>
+               <div class="form2">
+                  <div class="form2-title">Запишитесь на бесплатный комплексный осмотр</div>
 
                   <form action="/mail.php" method="post">
                      <input type="hidden" name="info" value="Запишитесь на бесплатный комплексный осмотр">
@@ -133,145 +125,124 @@
                      <button class="button ajax-submit" type="submit" id="zapisat">Записаться</button>
 
                      <div class="form-info">Отправляя данные Вы соглашаетесь <br>
-                        <span>с политикой конфиденциальности</span> сайта</div>
+                        <a href="#" target="_blank">с политикой конфиденциальности</a> сайта
                      </div>
                   </form>                 
-               
+               </div>
             </div>
          </div>
       </section>  
 
       <section class="section section-services" id="services">
          <div class="container">
+            <div class="section-title">наши услуги</div>
+   
             <div class="section-services-content">
-               <div class="section-title">
-                  наши услуги
+               <div class="service">
+                  <img src="./img/service-1.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Ортодонтия</h4>
+                     <div class="service-text">исправление патологий <br> зубного ряда</div>
+                  </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-1">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
+                  </div>
                </div>
-               <div class="section-services-content">
-                  <div class="service">
-                     <img src="./img/service-1.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Ортодонтия
-                        </h4>
-                        <div class="service-text">исправление патологий <br>
-                           зубного ряда</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-1">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+
+               <div class="service">
+                  <img src="./img/service-2.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Терапевтическая стоматология</h4>
+                     <div class="service-text">диагностика, лечение зубов <br> и полости рта</div>
                   </div>
-                  <div class="service">
-                     <img src="./img/service-2.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Терапевтическая стоматология
-                        </h4>
-                        <div class="service-text">диагностика, лечение зубов <br>
-                           и полости рта</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-2">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-2">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
                   </div>
-                  <div class="service">
-                     <img src="./img/service-3.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Ортопедическая стоматология
-                        </h4>
-                        <div class="service-text">диагностика и лечение <br>
-                           зубочелюстной системы</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-3">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+               </div>
+
+               <div class="service">
+                  <img src="./img/service-3.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Ортопедическая стоматология</h4>
+                     <div class="service-text">диагностика и лечение <br> зубочелюстной системы</div>
                   </div>
-                  <div class="service">
-                     <img src="./img/service-4.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Пародонтология
-                        </h4>
-                        <div class="service-text">выявление и лечение заболеваний <br>
-                           десен и ротовой полости</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-4">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-3">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
                   </div>
-                  <div class="service">
-                     <img src="./img/service-5.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Детская стоматология
-                        </h4>
-                        <div class="service-text">лечение зубов и полости рта у детей с  <br> младенчества до подросткового возраста</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-5">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+               </div>
+
+               <div class="service">
+                  <img src="./img/service-4.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Пародонтология</h4>
+                     <div class="service-text">выявление и лечение заболеваний десен и ротовой полости</div>
                   </div>
-                  <div class="service">
-                     <img src="./img/service-6.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Гнатология
-                        </h4>
-                        <div class="service-text">лечение заболеваний <br>
-                           височно-нижнечелюстного сустава</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-6">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-4">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
                   </div>
-                  <div class="service">
-                     <img src="./img/service-7.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Рентгендиагностика
-                        </h4>
-                        <div class="service-text">распознавание заболеваний на основе <br>
-                           данных рентгенологического исследования</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-7">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+               </div>
+
+               <div class="service">
+                  <img src="./img/service-5.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Детская стоматология</h4>
+                     <div class="service-text">лечение зубов и полости рта у детей с младенчества до подросткового возраста</div>
                   </div>
-                  <div class="service">
-                     <img src="./img/service-8.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Хирургическая стоматология Имплантация
-                        </h4>
-                        <div class="service-text">лечением заболеваний полости рта <br>
-                           с помощью хирургических методик</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-8">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-5">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
                   </div>
-                  <div class="service">
-                     <img src="./img/service-9.jpg" alt="">
-                     <div class="service-text-block">
-                        <h4 class="service-title">
-                           Раннее ортодонтическое лечение
-                        </h4>
-                        <div class="service-text">исправление прикуса и сопутствующих <br>
-                           проблем, вызванных его нарушениями</div>
-                     </div>
-                     <div class="service-button">
-                        <button class="button-blue" data-remodal-target="more-modal-9">Подробнее</button>
-                        <button class="button">Записаться</button>
-                     </div>
+               </div>
+
+               <div class="service">
+                  <img src="./img/service-6.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Гнатология</h4>
+                     <div class="service-text">лечение заболеваний височно-нижнечелюстного сустава</div>
+                  </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-6">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
+                  </div>
+               </div>
+
+               <div class="service">
+                  <img src="./img/service-7.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Рентгендиагностика</h4>
+                     <div class="service-text">распознавание заболеваний на основе данных рентгенологического исследования</div>
+                  </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-7">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
+                  </div>
+               </div>
+
+               <div class="service">
+                  <img src="./img/service-8.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Хирургическая стоматология Имплантация</h4>
+                     <div class="service-text">лечением заболеваний полости рта с помощью хирургических методик</div>
+                  </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-8">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
+                  </div>
+               </div>
+
+               <div class="service">
+                  <img src="./img/service-9.jpg" alt="">
+                  <div class="service-content">
+                     <h4 class="service-title">Раннее ортодонтическое лечение</h4>
+                     <div class="service-text">исправление прикуса и сопутствующих проблем, вызванных его нарушениями</div>
+                  </div>
+                  <div class="service-button">
+                     <button class="button-blue" data-remodal-target="more-modal-9">Подробнее</button>
+                     <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
                   </div>
                </div>
             </div>
@@ -280,9 +251,9 @@
 
       <section class="section section-klinika" id="klinika">
          <div class="container">
-            <div class="section-title">
+            <h2 class="section-title">
                О стоматологической клинике
-            </div>
+            </h2>
             <div class="section-klinika-content">
                <div class="owl-carousel klinika-carousel">
                   <img src="./img/klinika.jpg" alt="">
@@ -311,11 +282,10 @@
          </div>
       </section>
 
-      <section class="section-form">
+      <section class="section section-form inverse">
          <div class="container">
+            <h2 class="section-title">Запишитесь на бесплатный комплексный осмотр</h2>
             <div class="form">
-               <div class="form-title inverse">Запишитесь на бесплатный комплексный осмотр</div>
-
                <form action="/mail.php" method="post">
                   <input type="hidden" name="info" value="Запишитесь на бесплатный комплексный осмотр">
                   <div class="input-div">
@@ -329,10 +299,9 @@
                   <button class="button ajax-submit" type="submit" id="zapisatsya">Записаться</button>
                </form>
                
-               <div class="form-info inverse">
-                  Отправляя данные Вы соглашаетесь <span>с политикой конфиденциальности</span> сайта
+               <div class="form-info">
+                  Отправляя данные Вы соглашаетесь <a href="" target="_blank">с политикой конфиденциальности</a> сайта
                </div>
-
             </div>
          </div>
       </section>
@@ -356,6 +325,7 @@
                         С перечнем сертификатов и лицензий вы можете ознакомиться ниже.</div>
                   </div>
                </div>
+
                <div class="work">
                   <div class="work-img">
                      <img src="./img/work-2.png" alt="">
@@ -369,6 +339,7 @@
                         Во время ожидания приема, дети могут рисовать и играть в специально обустроенной зоне.</div>
                   </div>
                </div>
+
                <div class="work">
                   <div class="work-img">
                      <img src="./img/work-3.png" alt="">
@@ -383,6 +354,7 @@
                            соблюдению санитарно-гигиенических требований и методами стерилизации, гарантирующим безопасность от инфицирования.</div>
                   </div>
                </div>
+
                <div class="work">
                   <div class="work-img">
                      <img src="./img/work-4.png" alt="">
@@ -397,6 +369,7 @@
                            любой ваш зуб, ведь это ваша ценность.</div>
                   </div>
                </div>
+
                <div class="work">
                   <div class="work-img">
                      <img src="./img/work-5.png" alt="">
@@ -411,6 +384,7 @@
                            числе и лазерное оборудование.</div>
                   </div>
                </div>
+
                <div class="work">
                   <div class="work-img">
                      <img src="./img/work-6.png" alt="">
@@ -432,7 +406,7 @@
       <section class="section section-doctors" id="doctors">
          <div class="container">
             <div class="section-title">
-               Наши врачи <br>
+               Наши врачи
                <span>Дружная команда профессионалов</span>
             </div>
             <div class="owl-carousel doctors-carousel">
@@ -531,7 +505,7 @@
 
       <secion class="section section-reviews" id="reviews">
          <div class="container">
-            <div class="section-title">Отзывы<br>
+            <div class="section-title">Отзывы
                <span>Более 100 улыбок от наших клиентов</span>
             </div>            
             <div class="owl-carousel reviews-carousel">
@@ -594,11 +568,11 @@
          </div>
       </secion>
 
-      <section class="section-form">
+      <section class="section section-form inverse">
          <div class="container">
-            <div class="form">
-               <div class="form-title inverse">Запишитесь на бесплатный комплексный осмотр</div>
+            <div class="section-title">Запишитесь на бесплатный комплексный осмотр</div>
 
+            <div class="form">
                <form action="/mail.php" method="post">
                   <input type="hidden" name="info" value="Запишитесь на бесплатный комплексный осмотр">
                   <div class="input-div">
@@ -609,11 +583,11 @@
                      <span class="error-message">Заполните это поле</span>
                   </div>
 
-                  <button class="button ajax-submit" type="submit" id="zapisatsya">Записаться</button>
+                  <button class="button ajax-submit" type="submit">Записаться</button>
                </form>
                
-               <div class="form-info inverse">
-                  Отправляя данные Вы соглашаетесь <span>с политикой конфиденциальности</span> сайта
+               <div class="form-info">
+                  Отправляя данные Вы соглашаетесь <a href="#" target="_blank">с политикой конфиденциальности</a> сайта
                </div>
 
             </div>
@@ -627,10 +601,10 @@
             </div>
             <div class="contact">
                <div class="map" data-target="address1">
-                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A772483703be7c128fab649e33a3506e5bcf91e022980cb6562e8374e5461d1a5&amp;width=1181&amp;height=552&amp;lang=ru_RU&amp;scroll=true"></script>
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A772483703be7c128fab649e33a3506e5bcf91e022980cb6562e8374e5461d1a5&amp;width=100%&amp;height=552&amp;lang=ru_RU&amp;scroll=true"></script>
                </div>
                <div class="map active" data-target="address2">
-                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A772483703be7c128fab649e33a3506e5bcf91e022980cb6562e8374e5461d1a5&amp;width=1181&amp;height=552&amp;lang=ru_RU&amp;scroll=true"></script>
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A772483703be7c128fab649e33a3506e5bcf91e022980cb6562e8374e5461d1a5&amp;width=100%&amp;height=552&amp;lang=ru_RU&amp;scroll=true"></script>
                </div>
 
                <div class="contact-content">
@@ -812,12 +786,12 @@
          </div>
       </section>
 
-      <section class="section-form section-form-vopros">
+      <section class="section section-form section-form-vopros inverse">
          <div class="container">
-            <div class="form">
-               <div class="form-title inverse">Остались вопросы? <br>
-                     <span>Оставьте свой номер телефона, мы свяжемся с вами и ответим на все вопросы</span></div>
+            <div class="section-title">Остались вопросы?
+               <span>Оставьте свой номер телефона, мы свяжемся с вами и ответим на все вопросы</span></div>
 
+            <div class="form">
                <form action="/mail.php" method="post">
                   <input type="hidden" name="info" value="Остались вопросы">
                   <div class="input-div">
@@ -831,10 +805,9 @@
                   <button class="button ajax-submit" type="submit" id="zadat_vopros">Задать вопрос</button>
                </form>
                
-               <div class="form-info inverse">
-                     Отправляя данные Вы соглашаетесь <span>с политикой конфиденциальности</span> сайта
+               <div class="form-info">
+                     Отправляя данные Вы соглашаетесь <a href="#" target="_blank">с политикой конфиденциальности</a> сайта
                </div>
-
             </div>
          </div>
       </section>
@@ -842,9 +815,9 @@
       <section class="section section-stomatolog">
          <div class="container">
             <div class="stomatolog">
-               <h3 class="stomatolog-title">
+               <h2 class="section-title">
                   Стоматологические услуги в Самаре
-               </h3>
+               </h2>
                <div class="stomatolog-text">
                   <p>Стоматология "Юдент" оказывает комплексное лечение зубов в Самаре по привлекательным ценам. Мы оказываем услуги в области терапевтической стоматологии, ортопедии, ортодонтии, пародонтологии, гнатологии, рентгендиагностики, хирургии и имплантации.  </p>
 
@@ -857,7 +830,6 @@
             </div>
          </div>
       </section>
-
 
       <footer class="footer">
          <nav class="main-menu">
@@ -891,6 +863,7 @@
                   Сб-Вс с 9:00 до 16:00
                </div>
 
+               <div class="grow"></div>
 
                <div class="header-phone hidden-xxs">
                   <a href="tel:+88462150102" class="text-phone">8 (846) 215-01-02</a>
@@ -909,38 +882,77 @@
          <div class="footer-block">
             <div class="container">
                <img src="./img/icons.png" alt="">
-               <div class="footer-block-title">
+               <a href="#" target="_blank" class="footer-block-title">
                   Политика конфиденцивальности
-               </div>
+               </a>
             </div>
          </div>
       </footer>
-         
-      </div>
-      
+               
    </div>
-   <div class="remodal remodal-small modal" data-remodal-id="zvonok-modal" data-remodal-options="hashTracking: true">
+
+   <div class="remodal remodal-small" data-remodal-id="thanks-modal" data-remodal-options="hashTracking: true">
       <button data-remodal-action="close" class="remodal-close"></button>
 
-      <div class="modal-title">
-          Оставьте заявку <br> и наш консультант перезвонит Вам
+      <div class="thanks">
+         <div class="thanks-title">
+            Спасибо!
+         </div>
+         <div class="thanks-text">
+            Мы свяжемся с Вами в ближайшее время
+         </div>                     
       </div>
-      
-      <form action="/mail.php" method="post">
-        <input type="hidden" name="info" value="Заказать звонок">
-        <div class="input-div">
-           <input type="text" class="input" name="name" placeholder="Имя">
-        </div>
-        <div class="input-div">
-           <input type="tel" class="input" name="phone" placeholder="Номер телефона*" required>
-           <span class="error-message">Заполните это поле</span>
-        </div>
+   </div>
 
-        <button class="button ajax-submit" type="submit" id="zakazat_zvonok">Заказать звонок</button>
-     </form>
+   <div class="remodal remodal-small" data-remodal-id="zvonok-modal" data-remodal-options="hashTracking: true">
+      <button data-remodal-action="close" class="remodal-close"></button>
 
-     <div class="form-info">*Ваши данные не будут переданы третьим лицам</div>
+      <div class="form2">
+         <div class="form2-title">
+            Оставьте заявку
+         </div>
 
+         <form action="/mail.php" method="post">
+            <input type="hidden" name="info" value="Заказать звонок">
+            <div class="input-div">
+               <input type="text" class="input" name="name" placeholder="Имя">
+            </div>
+            <div class="input-div">
+               <input type="tel" class="input" name="phone" placeholder="Номер телефона*" required>
+               <span class="error-message">Заполните это поле</span>
+            </div>    
+            <button class="button ajax-submit" type="submit" id="zakazat_zvonok">Заказать звонок</button>
+            <div class="form-info">Отправляя данные Вы соглашаетесь <br>
+               <a href="#" target="_blank">с политикой конфиденциальности</a> сайта
+            </div>
+         </form>     
+      </div>
+   </div>
+
+   <div class="remodal remodal-small" data-remodal-id="zapisat-modal" data-remodal-options="hashTracking: true">
+      <button data-remodal-action="close" class="remodal-close"></button>
+
+      <div class="form2">
+         <div class="form2-title">
+               Запишитесь <br>
+               на прием к врачу
+         </div>
+
+         <form action="/mail.php" method="post">
+            <input type="hidden" name="info" value="Заказать звонок">
+            <div class="input-div">
+               <input type="text" class="input" name="name" placeholder="Имя">
+            </div>
+            <div class="input-div">
+               <input type="tel" class="input" name="phone" placeholder="Номер телефона*" required>
+               <span class="error-message">Заполните это поле</span>
+            </div>    
+            <button class="button ajax-submit" type="submit" id="zapisatsya">Записаться</button>
+            <div class="form-info">Отправляя данные Вы соглашаетесь <br>
+               <a href="#" target="_blank">с политикой конфиденциальности</a> сайта
+            </div>
+         </form>     
+      </div>
    </div>
 
    <div class="remodal more" data-remodal-id="more-modal-1" data-remodal-options="hashTracking: true">
@@ -959,8 +971,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>
@@ -982,8 +994,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>
@@ -1005,8 +1017,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>
@@ -1028,8 +1040,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>
@@ -1051,8 +1063,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>
@@ -1074,8 +1086,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>
@@ -1097,8 +1109,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>
@@ -1120,8 +1132,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>
@@ -1142,8 +1154,8 @@
             </div>
             <div class="grow"></div>
             <div class="more-button">
-               <button class="button-blue">Подробнее</button>
-               <button class="button">Записаться</button>
+               <button class="button-blue" data-remodal-target="zvonok-modal">Заказать звонок</button>
+               <button class="button" data-remodal-target="zapisat-modal">Записаться</button>
             </div>
          </div>
       </div>

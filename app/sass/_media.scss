@@ -10,8 +10,7 @@
    .header {
       &-slogan {
          display: none;
-      }
-      
+      }      
    }
 
    .main-menu {
@@ -19,6 +18,9 @@
    }
 
    .section {    
+      &-main {
+         background-position: center left;
+      }
       &-klinika {
          &-content {
             padding-top: 0;
@@ -60,24 +62,18 @@
    .page-wrapper {
       padding-top: 95px;
    }
-    .form {
-       &-title {
-          font-size: 20px;
-          margin: 15px;
-       }
-        &-content {
-            justify-content: center;
-            .input-div {
-                margin: 0 15px 30px;
-            }
-        }
-    }
 
-    .hamburger {
-        display: block;
-    }    
+   .form {
+      .input-div, .button {
+         width: 32%;
+      }
+   }
 
-    .header {
+   .hamburger {
+      display: block;
+   }    
+
+   .header {
       &-phone {
          display: none;
       }
@@ -89,7 +85,13 @@
       .grow {
          display: block;
       }
-    }
+   }
+
+   .footer {
+      .grow {
+         display: block;
+      }
+   }
 
 	.main-menu {
       display: none;
@@ -116,27 +118,27 @@
                 }
 			}
 		}
-    }
+   }
 
    .section {
       &-main {
+         background-position: center center;
          &-content {
             flex-direction: column;
             justify-content: center;
-            .main-content {
-               margin: 0 auto 20px;
-               text-align: center;
-            }
          }
-         &-form {
+
+         &-block {
+            margin: 0 auto 20px;
+            text-align: center;
+         }
+
+         .form2 {
             margin: 0 auto;
          }
       }
 
       &-services {
-         &-content {
-            
-         }
          .service {
             width: 48%;
          }
@@ -155,16 +157,11 @@
                margin: 0 auto;
             }
             &-text {
+               max-width: 100%;
                margin: 0 auto 50px;
             }
          }
-      }
-
-      &-form {
-         .input-div, .button {
-            width: 32%;
-         }
-      }
+      }      
 
       &-work {
          &-content {
@@ -186,6 +183,37 @@
          }
       }
 
+      &-certificates {
+         .slick {   
+            &-track {
+               padding: 70px 0;
+            }
+         }
+
+         .slick-slide {         
+            &.slick-center {
+               transform: scale(1.5);
+               z-index: 10;
+            }         
+         
+            &.slick-center-prev {
+               transform: scale(1) translateX(0px);
+            }
+         }
+   
+         .slick-center + .slick-slide {
+            transform: scale(1) translateX(0px);
+         }
+      }
+
+      &-reviews {
+         .review {
+            &-content {
+               padding-left: 100px;
+            }
+         }
+      }
+
       &-contact {
          &-content {
             position: static;            
@@ -195,68 +223,83 @@
 
 }
 
+@media only screen and (max-width : 900.5px) {
+   .more {
+      &-content {
+         align-items: flex-start;
+      }
+
+      &-img {
+         max-width: 400px;
+      }
+   }
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767.5px) {
 
-    .logo {
-        max-width: 200px;
-    }
+   .header {
+      &-title {
+         display: none;
+      }
+      .logo {
+         margin: 0;
+      }
+      .button {
+         margin: 0;
+      }
+   }
 
-    .header {
-        &-title {
-           display: none;
-        }
-        .logo {
-           margin: 0;
-        }
-        .button {
-           margin: 0;
-        }
-    }
+   .form {
+      form {
+         flex-direction: column;
+         align-items: center;
+      }
+      .input-div, .button {
+         max-width: 500px;
+         width: 100%;
+      }
+   }
     
    .section {
       &-title {
          font-size: 27px;
       }
 
-      &-form {
-         .form-title {
-            font-size: 24px;
-         }
-         form {
-           flex-direction: column;
-           align-items: center;
-         }
-         .input-div, .button {
-            max-width: 500px;
-            width: 100%;
-         }
-      }
-
-      &-stomatolog {
-         .stomatolog {
-            padding: 20px;
-            &-title {
-               font-size: 22px;
+      &-certificates {
+         .slick {
+            &-slider {
+               padding: 0 100px;
             }
+   
+            &-track {
+               padding: 0;
+            }   
          }
-      }
+   
+         .slick-slide {         
+            z-index: 0 !important;
 
-      &-voprosy {
-         &-content {
-            flex-direction: column;
-            max-width: 500px;
-            margin: 0 auto;
-            &-1, &-2 {
-               width: 100%;
-            }
-         }
-         .vopros {
-            padding: 10px;
-         }
-      }
+            &.slick-center {
+               transform: scale(1);
+            }                  
+         }   
+      }      
 
       &-reviews {
+         .review {
+            flex-direction: column;
+
+            &-content {
+               margin-top: -170px;
+               padding: 200px 30px 30px;
+            }
+
+            &-img {
+               margin: 0 auto;
+            }
+         }
+         
          .video {
             flex-direction: column;
             &-main {
@@ -281,9 +324,60 @@
          }
       }
       
+      &-contact {
+         padding-bottom: 0;
+         .map {
+            height: 300px;
+         }
+
+         .contact {
+            &-content {
+               position: relative;
+               margin: -50px auto 0;
+               z-index: 2;
+               right: 0;
+            }
+
+            &-block {
+               padding: 15px 10px;
+
+               &-text {
+                  font-size: 16px;
+               }
+
+               &-button {
+                  margin-bottom: 15px;
+               }
+            }            
+
+            &-address {
+               width: 130px;
+               font-size: 10px;
+            }
+         }
+      }
+
+      &-voprosy {
+         &-content {
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+            &-1, &-2 {
+               width: 100%;
+            }
+         }
+      }
+
+      &-stomatolog {
+         .stomatolog {
+            padding: 20px;
+         }
+      }
    }
 
    .more {
+      padding: 25px;
+
       &-content {
          flex-direction: column;
          justify-content: center;
@@ -291,9 +385,14 @@
       }
       &-title {
          margin: 0 0 20px 0;
+         text-align: center;
       }
       &-block {
-         text-align: center;
+         margin-left: 0;
+         max-width: 490px;
+      }
+      &-img {
+         max-width: 100%;
       }
       img {
          margin-bottom: 20px;
@@ -305,30 +404,42 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479.5px) {
 
-  .remodal {
-    &.remodal-small {
-      padding: 25px 15px;
-    }
-  }
-
+   body {
+      font-size: 14px;
+   }
 
    .form {
       width: 100%;
       max-width: none;
-         .input-div, .button {
-            width: 100%;
-            margin: 0 0 10px;
-         }
+
+      &-info {
+         font-size: 11px;
+      }
+
+      .input-div, .button {
+         width: 100%;
+         margin: 0 0 10px;
+      }
    }
 
-    .button {
-        width: 100%;
-        min-width: auto;
+   .form2 {
+      &-title {
+         padding: 20px;
+         font-size: 16px;
+      }
+      form {
+         padding: 20px;
+      }   
+   }
 
-        &.button-large {
-            font-size: 16px;
-        }
-    }
+   .button {
+      width: 100%;
+      min-width: auto;
+
+      &.button-large {
+         font-size: 16px;
+      }
+   }
 
 	.col-xxs-12 {
 		width: 100%;
@@ -336,32 +447,50 @@
 
 	.col-xxs-offset-0 {
 		margin-left: 0;
-    }
+   }
     
-    .visible-xxs {
-        display: block !important;
-    }
+   .visible-xxs {
+      display: block !important;
+   }
 
 	.hidden-xxs {
 		display: none !important;
-    }
+   }
 
-    .header {
-       &-button {
-          display: none;
-       }
-    }
+   .header {
+      &-button {
+         display: none;
+      }
+   }
 
    .section {
+      padding: 40px 0;
+
       &-title {
-         font-size: 25px;
+         font-size: 21px;
          margin-bottom: 20px;
       }
 
       &-main {
-         form {
-            padding: 20px;
+         &-title{
+            margin: 0;
+            font-size: 23px;
+            text-align: left;
          }
+
+         &-text {
+            display: none;
+         }
+
+         &-list {
+            text-align: center;
+         }
+
+         &-item {
+            font-size: 14px;
+         }
+
+         
       }
 
       &-services {
@@ -370,13 +499,22 @@
          }
          .service {
             width: 100%;
+            &-title {
+               font-size: 20px;
+            }
+            &-button {
+               .button-blue {
+                  margin-right: 10px;
+               }
+            }
          }
       }
 
       &-klinika {
          &-text {
-            font-size: 20px;
+            font-size: 16px;
          }
+
          .klinika {
             &-text {
                margin: 0 auto 20px;
@@ -385,13 +523,15 @@
       }
 
       &-work {
-         &-content {
-         }
          .work {
             flex-direction: column;
             align-items: center;
             &-img {
                margin-right: 0;
+            }
+            &-title {
+               font-size: 16px;
+               margin-bottom: 5px;
             }
             &-text-block {
                text-align: center;
@@ -399,15 +539,66 @@
          }
       }
 
-      &-reviews {
-         .video {
-            &-main {
+      &-doctors {
+         .doctor {
+            img {
+               width: 100%;
             }
+
+            &-title {
+               font-size: 20px;
+            }
+
+            &-text-block {
+               padding: 25px;
+            }
+         }
+      }
+
+      &-certificates {
+         .slick {   
+            &-slider {
+               padding: 0 0px;
+            }
+
+            &-arrow {
+               width: 35px;
+               height: 41px;               
+            }
+   
+            &-prev {
+               background-image: url('../img/arrow-mini-left.png') !important;
+            }
+   
+            &-next {
+               background-image: url('../img/arrow-mini-right.png') !important;
+            }
+         }
+      }
+
+      &-reviews {
+         .reviews-carousel {
+            padding: 0;
+
+            .owl {
+               &-prev, &-next {
+                  top: 100px;
+                  margin-top: 0;
+               }
+
+               &-prev {
+                  margin-left: -15px;
+               }
+
+               &-next {
+                  margin-right: -15px;
+               }
+            }
+         }
+
+         .video {
             &-thumbs {
                flex-wrap: wrap;
-               // flex-direction: column;
-            }
-            &-thumb {
             }
          }
       }
@@ -427,15 +618,32 @@
 
    .owl-carousel {
       .owl {
+         &-prev {
+            background-image: url('../img/arrow-mini-left.png') !important;
+         }
+
+         &-next {
+            background-image: url('../img/arrow-mini-right.png') !important;
+         }
+
          &-prev, &-next {
-            width: 40px;
-            height: 50px;
+            width: 35px;
+            height: 41px;
+            margin-top: -20.5px;
+         }
+
+         &-dot {
+            width: 12px;
+            height: 12px;
          }
       }
    }
    
-
    .more {
+      &-title {
+         font-size: 16px;
+         text-align: left;
+      }
       &-button {
          flex-direction: column;
          align-items: center;

@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+}
+
 img, iframe {
     max-width: 100%;
 }
@@ -29,6 +33,10 @@ a {
 
 input, button, textarea, a {
     outline: none;
+}
+
+button {
+   cursor: pointer;
 }
 
 p {
@@ -100,7 +108,15 @@ p {
    }    
 
    &:active {
-    top: 1px;
+      top: 1px;
+   }
+
+   &-blue {
+      background-color: $accent;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      padding: 13px 5px;
    }
 }
 
@@ -110,7 +126,7 @@ p {
   .input {
     width: 100%;  
   }
-  
+
   label {
    color: #9d9c9c;
    text-align: left;
@@ -178,23 +194,63 @@ p {
 }
 
 .form {
-  text-align: left;
+   text-align: left;
+   max-width: 895px;
+   margin: 0 auto;
 
-  &-info {
-    font-size: 14px;
-  }
+   &-info {
+      text-align: center;
+      font-size: 14px;
 
-  form {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+      a {
+         color: $accent;
+         border-bottom: 1px solid $accent;
+         white-space: nowrap;
+      }
+   }
 
-  .input-div {
-    margin-right: 20px;
-  }
+   form {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 15px;
+   }
 
-  .input-div, .button {
-    margin-bottom: 10px;
-  }
+   .input-div, .button {
+      width: 276px;
+      margin-bottom: 10px;
+   }
+}
+
+.form2 {
+   max-width: 380px;
+   border-radius: 5px;
+   background-color: #fff;
+   overflow: hidden;
+   
+   &-title {
+      padding: 20px 40px;
+      font-size: 22px;
+      font-weight: bold;
+      background-color: $accent;
+      color: #fff;
+      text-align: center;
+   }
+
+   form {
+      padding: 20px 40px;
+   }
+
+   .input-div {
+      margin-bottom: 20px;
+   }
+
+   .button {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+
+   .form-info {
+      color: #000;
+   }
 }

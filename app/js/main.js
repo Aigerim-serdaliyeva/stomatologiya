@@ -8,8 +8,7 @@ $(document).ready(function() {
     var utms = parseGET();
     var headerHeight = 147;
     var $hamburger = $(".hamburger");
-    var sfer = $('[data-remodal-id="obsudit-sodrudni4estvo"]').remodal();
-    var $sfer = $('[data-remodal-id="obsudit-sodrudni4estvo"]');
+    var thanks = $('[data-remodal-id="thanks-modal"]').remodal();
 
     if(utms && Object.keys(utms).length > 0) {
         window.sessionStorage.setItem('utms', JSON.stringify(utms));
@@ -55,25 +54,24 @@ $(document).ready(function() {
         });
     }
 
-    onscroll();
+   onscroll();
 
-    $(".main-menu .link").click(function(e) {
-        var $href = $(this).attr('href');
-        if($href.length > 1 && $href.charAt(0) == '#' && $($href).length > 0) {
-            e.preventDefault();
-            var top = $($href).offset().top - headerHeight;
-            $html.stop().animate({ scrollTop: top }, "slow", "swing");
-        }
+   $(".main-menu .link").click(function(e) {
+      var $href = $(this).attr('href');
+      if($href.length > 1 && $href.charAt(0) == '#' && $($href).length > 0) {
+         e.preventDefault();
+         var top = $($href).offset().top - headerHeight;
+         $html.stop().animate({ scrollTop: top }, "slow", "swing");
+      }
 
-        if($wnd.width() <= 991) {
-            toggleHamburger();
-        }
-    });
+      if($wnd.width() <= 991) {
+         toggleHamburger();
+      }
+   });
 
     $top.click(function() {
         $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
     });
-
 
     $("input[type=tel]").mask("+7 (999) 999 99 99", {
         completed: function() {
@@ -112,37 +110,44 @@ $(document).ready(function() {
       }
     });
 
-    $(".ajax-submit").click(function(e) {        
-        var $form = $(this).closest('form');
-        var $requireds = $form.find(':required');
-        var formValid = true;
+   $(".ajax-submit").click(function(e) {        
+      e.preventDefault();
+      var $form = $(this).closest('form');
+      var $requireds = $form.find(':required');
+      var formValid = true;
 
-        $requireds.each(function() {
-            $elem = $(this);
+      $requireds.each(function() {
+         $elem = $(this);
 
-            if(!$elem.val() || !checkInput($elem)) {
-                $elem.addClass('error');
-                formValid = false;
-            }
-        });
+         if(!$elem.val() || !checkInput($elem)) {
+            $elem.addClass('error');
+            formValid = false;
+         }
+      });
 
-        if(formValid) {
-            
-            if(Object.keys(utms).length === 0) {
-              utms['utm'] = "Прямой переход";
-            } 
+      var data = $form.serialize();
 
-            for(var key in utms) {
-              var input = document.createElement("input");
-              input.type = "hidden";
-              input.name = key;
-              input.value = utms[key];
-              $form[0].appendChild(input);
-            }
-        } else {
-          e.preventDefault();
-        }
-    });
+      if(Object.keys(utms).length > 0) {
+         for(var key in utms) {
+               data += '&' + key + '=' + utms[key];
+         }
+      } else {
+         data += '&utm=Прямой переход'
+      } 
+
+      if(formValid) {
+         $.ajax({
+               type: "POST",
+               url: "/mail.php",
+               data: data
+         }).done(function() {                
+         });
+
+         $requireds.removeClass('error');
+         $form[0].reset();
+         thanks.open();
+      }
+   });
 
    $(".review-link").click(function(e) {
       e.preventDefault();      
@@ -185,23 +190,25 @@ $(document).ready(function() {
       centerMode: true,
       draggable: false,
       centerPadding: '0px',
-      responsive: [{
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-          }      
-        }, {      
-          breakpoint: 479,
-          settings: {
-            slidesToShow: 1,
-          }      
-        }
+      responsive: [
+         {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+            }      
+         },
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 1,
+            }      
+         }
       ]
   });
 
    $(".doctors-carousel").owlCarousel({    
       nav: true,
-      dots: true,
+      dots: false,
       loop: true,
       smartSpeed: 500,
       margin: 30,
@@ -223,7 +230,6 @@ $(document).ready(function() {
       items: 1
    });
 
-
    $(".klinika-carousel").owlCarousel({    
       nav: true,
       dots: true,
@@ -235,11 +241,8 @@ $(document).ready(function() {
    });
 
    $(".vopros-button").click( function() {
-      // $(".vopros").removeClass("active");
       $(this).parent().toggleClass("active");
-   })
-
-   
+   });
 
 });
 
